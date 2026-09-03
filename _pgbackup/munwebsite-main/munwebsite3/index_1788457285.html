@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Turner Fenton MUN | Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <style>/* Reset default browser spacing */body { margin: 0; padding: 0; } .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(10,30,53,1) 0%, rgba(16,41,66,1) 100%); color: var(--white); min-height: 300px; padding: 0 0 80px; } .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(215,226,236,0.08) 0%, rgba(215,226,236,0) 48%); } .hero-content { position: relative; z-index: 2; max-width: 1365px; margin: 0 auto; padding: 28px 54px 0; min-height: 300px; } .hero-ornament { position: absolute; right: 90px; top: 62px; width: 500px; height: 500px; border: 1px solid rgba(217,225,234,0.7); border-radius: 50%; transform: rotate(-14deg); opacity: 0.9; } .hero-ornament::before, .hero-ornament::after { content: ''; position: absolute; border: 1px solid rgba(217,225,234,0.4); border-radius: 50%; } .hero-ornament::before { inset: 48px 40px 70px 56px; } .hero-ornament::after { inset: 118px 88px 110px 102px; } .hero .hero-crest-bg, .hero img.crest { display: none; } .hero-text-block { max-width: 760px; padding-top: 100px; margin-left: 18px; position: relative; z-index: 2; } .hero-date { font-size: 12px; letter-spacing: 0.38em; color: var(--silver); font-weight: 600; text-transform: uppercase; margin-bottom: 22px; } .hero h1 { font-size: clamp(68px,7vw,132px); line-height: 0.92; font-weight: 500; letter-spacing: -0.06em; font-family: Georgia, 'Times New Roman', serif; color: #F1F5F9; } .hero p.sub { font-size: 20px; color: #E5ECF5; max-width: 640px; line-height: 1.5; margin-top: 26px; font-weight: 400; } .hero .actions { display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap; } .hero .btn { padding: 18px 28px; min-width: 220px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; } .hero .btn-primary { background: var(--white); color: var(--ink); border: 1px solid rgba(255,255,255,0.8); } .hero .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(217,225,234,0.9); } .date-badge { position: absolute; right: 100px; bottom: 40px; width: 170px; height: 170px; border: 1px solid rgba(217,225,234,0.9); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--silver-light); background: rgba(255,255,255,0.01); } .date-badge span, .date-badge small { font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--silver); font-weight: 500; } .date-badge strong { font-size: 32px; letter-spacing: 0.04em; font-weight: 500; margin: 10px 0 8px; font-family: Georgia, 'Times New Roman', serif; } .date-badge small { font-size: 20px; letter-spacing: 0.12em; } .letter-section { background: var(--grey-bg); background-image: url('assets/white-paper-background-texture_125869-833.avif'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; box-sizing: border-box; } .letter-grid { display: grid; grid-template-columns: 260px 1fr; gap: 52px; align-items: start; max-width: 1365px; margin: 0 auto; padding: 60px 20px; } .letter-grid .ph { aspect-ratio: 4/5; } .letter-grid p { color: var(--text-soft); font-size: 15px; line-height: 1.75; margin-bottom: 14px; } .sig-block { margin-top: 22px; } .sig-block .ph { width: 230px; height: 90px; border: none; background: transparent; padding: 0; display: block; object-fit: contain; filter: none; } .sig-name { margin-top: 10px; font-size: 19px; font-weight: 700; color: #486e8c; }</style>
+        <script>
+            function phFallback(img,label){
+                label = label || 'Picture';
+                var div = document.createElement('div');
+                div.className = img.className + ' ph';
+                div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+                img.replaceWith(div);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="site-shell" id="siteShell">
+            <nav class="nav">
+                <div class="nav-inner">
+                    <a class="brand" href="index.html">  <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+                        Turner Fenton MUN  </a>
+                    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+                    <div class="navlinks" id="navlinks">
+                        <a href="secretariat.html">Secretariat</a>
+                        <a href="committees.html">Committees</a>
+                        <a href="schedule.html">Schedule</a>
+                        <a href="position-papers.html">Position Papers</a>
+                        <a href="awards.html">Awards</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="registration.html" class="nav-cta">Register Now</a>
+                    </div>
+                </div>
+            </nav>
+            <section class="hero">
+                <div class="hero-content">
+                    <div class="hero-text-block">
+                        <div class="hero-date">March 14–15 · 2026</div>
+                        <h1>Turner Fenton<br>Model United Nations</h1>
+                        <div class="actions">
+                            <a class="btn btn-primary" href="registration.html">Register Now</a>
+                            <a class="btn btn-outline" href="committees.html">Explore Committees</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- COUNTDOWN SECTION -->
+            <section class="countdown-section">
+                <h2>Time Until the Conference</h2>
+                <div id="flipdown" class="flipdown flipdown__theme-dark"></div>
+                <div style="margin-top: 25px;">
+                    <a class="btn-schedule" href="schedule.html">View Schedule</a>
+                </div>
+            </section>
+            <section class="section letter-section">
+                <div class="letter-grid">
+                    <div>
+                        <img class="ph" src="assets/sg-headshot.jpg" alt="Secretary-General" onerror="phFallback(this)">
+                    </div>
+                    <div>
+                        <h2>Letter From the Secretary-General</h2>
+                        <p style="margin-top:18px;">Dear Delegates,</p>
+                        <p>My name is Shaan Shah, and it is my distinct honour to serve as the Secretary-General of the third annual Turner Fenton Secondary School Model United Nations Conference (TFSSMUN). On behalf of the entire Secretariat, it is my pleasure to welcome you to this year's conference.</p>
+                        <p>Whether you are an experienced delegate or attending your very first Model UN conference, we are excited to provide an engaging and rewarding experience that will challenge, inspire, and help you grow. TFSSMUN has always been committed to fostering an environment where delegates can develop critical thinking, diplomacy, public speaking, negotiation, and leadership skills while engaging with some of the world's most pressing issues.</p>
+                        <p>This year's conference features a diverse selection of committees, ranging from traditional General Assemblies to dynamic Crisis and Joint Crisis simulations. Every committee has been thoughtfully designed by our Directors, Chairs, and Dais teams to provide delegates with challenging debate, creative problem-solving opportunities, and an unforgettable committee experience. We encourage you to embrace your role, think critically, collaborate with fellow delegates, and approach every debate with confidence, professionalism, and an open mind.</p>
+                        <p>The success of TFSSMUN would not be possible without the unwavering dedication of our Secretariat, staff members, volunteers, faculty advisors, and the countless individuals who have worked tirelessly behind the scenes to make this conference a reality. Their commitment and passion have been instrumental in bringing this event to life, and for that, we are sincerely grateful.</p>
+                        <p>However, the true spirit of TFSSMUN lies with you. Your ideas, determination, and enthusiasm are what transform committee rooms into spaces of meaningful discussion and impactful diplomacy. Every speech you deliver, every resolution you draft, and every challenge you overcome contributes to the unique experience that makes Model United Nations so rewarding.</p>
+                        <p>Model United Nations has become an integral part of our high school journey, providing us with invaluable friendships, experiences, and opportunities for personal growth. It is our hope that TFSSMUN leaves the same lasting impact on each of you and inspires you to continue pursuing diplomacy, leadership, and global engagement long after this conference concludes.</p>
+                        <p>Thank you for choosing to be a part of TFSSMUN III. The Secretariat and I look forward to welcoming you and witnessing the passion, collaboration, and excellence that each of you will bring to the committee. We wish you the very best of luck and hope you have an unforgettable conference.</p>
+                        <p>Warm Regards,</p>
+                        <div class="sig-block">
+                            <img class="ph" src="assets/sg-signature.png" alt="Secretary-General signature" onerror="phFallback(this,'Signature')">
+                            <div class="sig-name">Shaan Shah</div>
+                            <div class="sig-role" style="color: #486e8c;">Secretary-General, Turner Fenton MUN</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section-navy">
+                <div class="section-head">
+                    <h2>Everything You Need</h2>
+                </div>
+                <div class="link-grid">
+                    <a class="link-card" href="secretariat.html"><h3>Secretariat</h3><p>Meet the team running the conference.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="committees.html"><h3>Committees</h3><p>See this years committees and topics.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="schedule.html"><h3>Schedule</h3><p>The full conference day, hour by hour.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="position-papers.html"><h3>Position Papers</h3><p>How to write and submit yours.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="registration.html"><h3>Registration</h3><p>Fees, deadlines, and sign up.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="awards.html"><h3>Awards</h3><p>How delegates get recognized.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="faq.html"><h3>FAQ</h3><p>Answers to common questions.</p><span class="arrow">View</span></a>
+                    <a class="link-card" href="contact.html"><h3>Contact Us</h3><p>Questions? Reach the right person.</p><span class="arrow">View</span></a>
+                </div>
+            </section>
+            <footer class="site-footer">
+                <div class="footer-inner">
+                    <div>
+                        <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
+                        <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
+                        <p>Turner Fenton Secondary School Model United Nations.</p>
+                    </div>
+                    <div>
+                        <h5>Conference</h5>
+                        <a href="secretariat.html">Secretariat</a>
+                        <a href="committees.html">Committees</a>
+                        <a href="schedule.html">Schedule</a>
+                        <a href="awards.html">Awards</a>
+                    </div>
+                    <div>
+                        <h5>Delegates</h5>
+                        <a href="position-papers.html">Position Papers</a>
+                        <a href="registration.html">Registration</a>
+                        <a href="faq.html">FAQ</a>
+                    </div>
+                    <div>
+                        <h5>Connect</h5>
+                        <a href="contact.html">Contact Us</a>
+                        <a href="#">Instagram</a>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <span>Copyright 2026 Turner Fenton Model United Nations</span>
+                </div>
+            </footer>
+        </div>
+        <!-- ENTRANCE SCRIPT -->
+        <script>
+            const entrance = document.getElementById('entrance');
+            const INTRO_DURATION = 3200;
+            const EXIT_DURATION = 1050;
+
+            function finishEntrance() {
+                if (!entrance || entrance.classList.contains('exit')) {
+                    return;
+                }
+
+                entrance.classList.add('exit');
+
+                setTimeout(function() {
+                    entrance.remove();
+                    document.body.style.overflow = 'auto';
+                }, EXIT_DURATION);
+            }
+
+            window.addEventListener('load', function() {
+                setTimeout(finishEntrance, INTRO_DURATION);
+            });
+
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                finishEntrance();
+            }
+        </script>
+        <!-- FLIPDOWN JS LIBRARY -->
+        <script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+        <!-- FLIPDOWN INITIALIZATION -->
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                // Target Date: March 14, 2027 at 09:00 AM EST
+                const targetTime = Math.floor(new Date('2027-03-14T09:00:00').getTime() / 1000);
+
+                try {
+                    new FlipDown(targetTime, 'flipdown').start();
+                    console.log("FlipDown initialized successfully!");
+                } catch (err) {
+                    console.error("FlipDown Initialization Error:", err);
+                }
+            });
+        </script>
+    </body>
+</html>

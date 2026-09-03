@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turner Fenton MUN | FAQ</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.acc-item{border-bottom:1px solid var(--line);}
+.acc-head{width:100%; text-align:left; background:none; border:none; padding:18px 2px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-size:15.5px; font-weight:700;}
+.acc-head::after{content:'+'; color:var(--silver-dark); font-size:18px; font-weight:400;}
+.acc-item.open .acc-head::after{content:'-';}
+.acc-body{max-height:0; overflow:hidden; transition:max-height .2s ease;}
+.acc-item.open .acc-body{max-height:240px;}
+.acc-body p{padding:0 2px 18px; color:var(--text-soft); font-size:14px; line-height:1.6;}
+</style>
+<script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script></head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+      Turner Fenton MUN
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="secretariat.html">Secretariat</a>
+      <a href="committees.html">Committees</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="position-papers.html">Position Papers</a>
+      <a href="awards.html">Awards</a>
+      <a href="faq.html" class="active">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="registration.html" class="nav-cta">Register Now</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <img class="banner-photo" src="assets/banners/conference-affairs.png" alt="" onerror="this.remove()">
+  <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
+  <h1>FAQ</h1>
+  <p>About the conference, and answers to common questions.</p>
+</div>
+<div class="section">
+  <div class="section-head">
+    <h2>About Turner Fenton MUN</h2>
+    <p>TFSSMUN is a Model United Nations conference hosted in the Peel Region by high school students from Turner Fenton Secondary School. This year marks our third annual conference, bringing together delegates from across the region for diplomacy, debate, and collaboration. Our goal is to create an engaging environment where students can explore global issues, represent diverse perspectives, and develop their skills in public speaking, negotiation, and leadership.</p>
+  </div>
+</div>
+<div class="section section-alt">
+  <div class="section-head">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div id="accordion">
+    <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">What should I wear?</button><div class="acc-body"><p>Delegates should wear professional business attire during the conference.</p></div></div>
+    <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">Do I need MUN experience?</button><div class="acc-body"><p>No. Both new and experienced delegates are welcome.</p></div></div>
+    <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">What should I bring?</button><div class="acc-body"><p>Bring identification, writing materials, research, and your position paper.</p></div></div>
+    <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">What is the code of conduct?</button><div class="acc-body"><p>Respect fellow delegates, chairs, staff, and advisors at all times.</p></div></div>
+    <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">Is financial aid available?</button><div class="acc-body"><p>About text. Financial aid policy and how to apply.</p></div></div>
+    <div class="acc-item"><button class="acc-head" onclick="toggleAcc(this)">How do I contact the Secretariat?</button><div class="acc-body"><p>Visit the Contact Us page for current contact information.</p></div></div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
+      <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
+      <p>Turner Fenton Secondary School Model United Nations.</p>
+    </div>
+    <div>
+      <h5>Conference</h5>
+      <a href="secretariat.html">Secretariat</a>
+      <a href="committees.html">Committees</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="awards.html">Awards</a>
+    </div>
+    <div>
+      <h5>Delegates</h5>
+      <a href="position-papers.html">Position Papers</a>
+      <a href="registration.html">Registration</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <a href="contact.html">Contact Us</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright 2026 Turner Fenton Model United Nations</span>
+  </div>
+</footer>
+
+<script>
+function toggleAcc(head){ head.parentElement.classList.toggle('open'); }
+</script>
+</body>
+</html>

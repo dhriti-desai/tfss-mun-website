@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turner Fenton MUN | Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.price-card{border:1px solid var(--line); border-radius:12px; padding:28px; background:var(--white);}
+.price-card.featured{border-color:var(--ink); background:var(--ink); color:var(--white); border-top:4px solid var(--silver);}
+.price-card.featured p{color:#C7CCD6;}
+.price-amt{font-size:32px; font-weight:800; margin-top:10px;}
+.price-list{margin-top:16px; font-size:13.5px; line-height:2;}
+.timeline{margin-top:16px; border-left:2px solid var(--line); padding-left:22px; display:flex; flex-direction:column; gap:22px;}
+.tl-item{position:relative;}
+.tl-item::before{content:''; position:absolute; left:-28px; top:4px; width:9px; height:9px; border-radius:50%; background:var(--ink);}
+.tl-date{font-size:12.5px; font-weight:700; color:var(--silver-dark);}
+</style>
+<script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script></head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+      Turner Fenton MUN
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="secretariat.html">Secretariat</a>
+      <a href="committees.html">Committees</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="position-papers.html">Position Papers</a>
+      <a href="awards.html">Awards</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="registration.html" class="nav-cta">Register Now</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <img class="banner-photo" src="assets/banners/registration.png" alt="" onerror="this.remove()">
+  <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
+  <h1>Registration</h1>
+  <p>Fees, deadlines, and how schools sign up for our one day conference.</p>
+</div>
+<div class="section">
+  <div class="grid grid-3">
+    <div class="price-card">
+      <span class="badge">Delegate</span>
+      <div class="price-amt">$XX</div>
+      <p>Per individual delegate</p>
+      <div class="price-list">Committee placement<br>Delegate handbook<br>Lunch included</div>
+    </div>
+    <div class="price-card featured">
+      <span class="badge badge-silver">Delegation</span>
+      <div class="price-amt">$XX</div>
+      <p>Per school, 10 or more delegates</p>
+      <div class="price-list">Everything above<br>Reserved country group<br>Faculty advisor pass</div>
+    </div>
+    <div class="price-card">
+      <span class="badge">Observer</span>
+      <div class="price-amt">$XX</div>
+      <p>Non competing guest</p>
+      <div class="price-list">Committee access<br>Opening and closing ceremony</div>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-date">Date</div><h3 style="font-size:15px; margin-top:2px;">Registration opens</h3></div>
+    <div class="tl-item"><div class="tl-date">Date</div><h3 style="font-size:15px; margin-top:2px;">Country choices released</h3></div>
+    <div class="tl-item"><div class="tl-date">Date</div><h3 style="font-size:15px; margin-top:2px;">Position paper deadline</h3></div>
+    <div class="tl-item"><div class="tl-date">Conference Day</div><h3 style="font-size:15px; margin-top:2px;">Turner Fenton MUN</h3></div>
+  </div>
+  <div style="text-align:center; margin-top:48px;">
+    <a class="btn btn-dark" href="#">Register Your Delegation</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
+      <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
+      <p>Turner Fenton Secondary School Model United Nations.</p>
+    </div>
+    <div>
+      <h5>Conference</h5>
+      <a href="secretariat.html">Secretariat</a>
+      <a href="committees.html">Committees</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="awards.html">Awards</a>
+    </div>
+    <div>
+      <h5>Delegates</h5>
+      <a href="position-papers.html">Position Papers</a>
+      <a href="registration.html">Registration</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <a href="contact.html">Contact Us</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright 2026 Turner Fenton Model United Nations</span>
+  </div>
+</footer>
+
+</body>
+</html>

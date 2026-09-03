@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Turner Fenton MUN | Awards</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+        <style>.medal { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; background: linear-gradient(155deg,var(--silver-light),var(--silver) 60%,var(--silver-dark)); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: var(--ink); text-align: center; } .award-card { display: flex; gap: 16px; align-items: flex-start; }</style>
+        <script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script>
+    </head>
+    <body>
+        <nav class="nav">
+            <div class="nav-inner">
+                <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+      Turner Fenton MUN </a>
+                <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+                <div class="navlinks" id="navlinks">
+                    <a href="secretariat.html">Secretariat</a>
+                    <a href="committees.html">Committees</a>
+                    <a href="schedule.html">Schedule</a>
+                    <a href="position-papers.html">Position Papers</a>
+                    <a href="awards.html" class="active">Awards</a>
+                    <a href="faq.html">FAQ</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="registration.html" class="nav-cta">Register Now</a>
+                </div>
+            </div>
+        </nav>
+        <div class="page-banner">
+            <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
+            <h1>Awards</h1>
+            <p>Recognizing diplomacy, leadership, preparation, and exceptional debate.</p>
+        </div>
+        <section class="awards-section" style="background-color: #e2eefd;">
+            <div class="awards-header">
+                <h1>TFSS MUN Award Winners</h1>
+                <p>Recognizing exceptional diplomacy, delegate excellence, and committee leadership.</p>
+            </div>
+            <div class="awards-container" style="padding-top: 50px;">
+                <!-- Award Card 1 -->
+                <div class="award-card float-1">
+                    <div class="award-title">Best Delegate</div>
+                    <div class="award-winner-name">Alex Morgan</div>
+                    <p class="award-desc">Awarded for outstanding negotiation and resolution drafting in the Security Council.</p>
+                </div>
+                <!-- Award Card 2 -->
+                <div class="award-card float-2">
+                    <div class="award-title">Outstanding Delegate</div>
+                    <div class="award-winner-name">Jordan Lee</div>
+                    <p class="award-desc">Recognized for persuasive public speaking and diplomacy in DISEC.</p>
+                </div>
+                <!-- Award Card 3 -->
+                <div class="award-card float-3">
+                    <div class="award-title">Best Position Paper</div>
+                    <div class="award-winner-name">Taylor Swift</div>
+                    <p class="award-desc">Authored comprehensive research and policy solutions in SOCHUM.</p>
+                </div>
+                <!-- Award Card 4 -->
+                <div class="award-card float-4">
+                    <div class="award-title">Honourable Mention</div>
+                    <div class="award-winner-name">Chris Evans</div>
+                    <p class="award-desc">Demonstrated active collaboration and leadership in the Historical Crisis Committee.</p>
+                </div>
+            </div>
+        </section>        #e2eefd
+    </div>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
+                <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
+                <p>Turner Fenton Secondary School Model United Nations.</p>
+            </div>
+            <div>
+                <h5>Conference</h5>
+                <a href="secretariat.html">Secretariat</a>
+                <a href="committees.html">Committees</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="awards.html">Awards</a>
+            </div>
+            <div>
+                <h5>Delegates</h5>
+                <a href="position-papers.html">Position Papers</a>
+                <a href="registration.html">Registration</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div>
+                <h5>Connect</h5>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright 2026 Turner Fenton Model United Nations</span>
+        </div>
+    </footer>
+</body>

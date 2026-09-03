@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turner Fenton MUN | Committees</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.side-badges{display:flex; gap:8px; margin-top:14px; flex-wrap:wrap;}
+</style>
+<script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script></head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+      Turner Fenton MUN
+    </a>
+    <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
+    <div class="navlinks" id="navlinks">
+      <a href="secretariat.html">Secretariat</a>
+      <a href="committees.html" class="active">Committees</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="position-papers.html">Position Papers</a>
+      <a href="awards.html">Awards</a>
+      <a href="faq.html">FAQ</a>
+      <a href="contact.html">Contact</a>
+      <a href="registration.html" class="nav-cta">Register Now</a>
+    </div>
+  </div>
+</nav>
+
+<div class="page-banner">
+  <img class="banner-photo" src="assets/banners/committees.png" alt="" onerror="this.remove()">
+  <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
+  <h1>Committees</h1>
+  <p>Each committee offers a different diplomatic environment, topic, and style of debate.</p>
+</div>
+<div class="section">
+  <div class="filter-row">
+    <button class="filter-btn active" data-cat="all" onclick="filterCom('all',this)">All</button>
+    <button class="filter-btn" data-cat="ga" onclick="filterCom('ga',this)">General Assembly (GA)</button>
+    <button class="filter-btn" data-cat="crisis" onclick="filterCom('crisis',this)">Crisis</button>
+    <button class="filter-btn" data-cat="special" onclick="filterCom('special',this)">Specialized Agency</button>
+  </div>
+  <div class="grid grid-auto" id="comGrid">
+    <div class="card" data-cat="ga">
+      <span class="badge">General Assembly</span>
+      <h3 style="font-size:22px; margin-top:10px;">WHO</h3>
+      <p style="margin-top:2px;">World Health Organization</p>
+      <p style="margin-top:12px;">International public health and global health policy.</p>
+    </div>
+    <div class="card" data-cat="special">
+      <span class="badge">Specialized Agency</span>
+      <h3 style="font-size:22px; margin-top:10px;">IAEA</h3>
+      <p style="margin-top:2px;">International Atomic Energy Agency</p>
+      <p style="margin-top:12px;">Nuclear security, energy, and non-proliferation.</p>
+    </div>
+    <div class="card" data-cat="crisis">
+      <span class="badge">Historical Crisis</span>
+      <h3 style="font-size:22px; margin-top:10px;">Cuban Missile Crisis JCC</h3>
+      <p style="margin-top:2px;">Joint Crisis Committee</p>
+      <p style="margin-top:12px;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
+      <div class="side-badges">
+        <span class="badge badge-silver">American Cabinet</span>
+        <span class="badge badge-silver">Soviet Cabinet</span>
+      </div>
+    </div>
+    <div class="card" data-cat="ga special crisis">
+      <span class="badge">Committee</span>
+      <h3 style="font-size:22px; margin-top:10px;">Name to be Confirmed</h3>
+      <p style="margin-top:2px;">Topic to be confirmed</p>
+      <p style="margin-top:12px;">More details will be announced by the Secretariat soon.</p>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
+      <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
+      <p>Turner Fenton Secondary School Model United Nations.</p>
+    </div>
+    <div>
+      <h5>Conference</h5>
+      <a href="secretariat.html">Secretariat</a>
+      <a href="committees.html">Committees</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="awards.html">Awards</a>
+    </div>
+    <div>
+      <h5>Delegates</h5>
+      <a href="position-papers.html">Position Papers</a>
+      <a href="registration.html">Registration</a>
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div>
+      <h5>Connect</h5>
+      <a href="contact.html">Contact Us</a>
+      <a href="#">Instagram</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>Copyright 2026 Turner Fenton Model United Nations</span>
+  </div>
+</footer>
+
+<script>
+function filterCom(cat, btn){
+  document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('#comGrid [data-cat]').forEach(c=>{
+    var cats = c.dataset.cat.split(' ');
+    c.style.display = (cat==='all' || cats.includes(cat)) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
