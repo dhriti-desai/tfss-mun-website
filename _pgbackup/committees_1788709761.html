@@ -7,40 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <style>
-    .side-badges { 
-        display: flex; 
-        gap: 8px; 
-        margin-top: 14px; 
-        flex-wrap: wrap; 
-    }
-
-    /* Ensures grid items stretch equally in height */
-    #comGrid {
-        display: grid;
-        align-items: stretch;
-    }
-
-    /* Makes the clickable link stretch to full height */
-    #comGrid > a {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-    }
-
-    /* Makes the card inner container fill the wrapper completely */
-    #comGrid .card {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        box-sizing: border-box;
-    }
-
-    /* Pushes bottom badges to the base so spacing stays clean */
-    #comGrid .card .side-badges {
-        margin-top: auto;
-    }
-</style>
+        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }</style>
         <script>
 function phFallback(img,label){
   label = label || 'Picture';
@@ -70,7 +37,7 @@ function phFallback(img,label){
                 </div>
             </div>
         </nav>
-        <div class="page-banner" style="background-position: center center; background-size: cover; height: 300px; background-image: url('assets/MUN%20Banners%20(31).png');">
+        <div class="page-banner" style="background-position: center center; background-size: cover; height: 300px; background-image: url('assets/MUN%20Banners%20(23).png');">
             <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
             <h1>Committees</h1>
             <p>Each committee offers a different diplomatic environment, topic, and style of debate.</p>
@@ -84,42 +51,42 @@ function phFallback(img,label){
                 <button class="filter-btn" data-cat="special" onclick="filterCom('special',this)">Specialized Agency</button>
             </div>
             <div class="grid grid-auto" id="comGrid" style="background-color: #edf2f7;">
-                <a href="who.html" style="text-decoration:none; color:inherit;" data-cat="ga"> <div class="card">
-                        <span class="badge">General Assembly</span>
-                        <h3 style="font-size:22px; margin-top:10px;">WHO</h3>
-                        <p style="margin-top:2px;">World Health Organization</p>
-                        <p style="margin-top:12px;">International public health and global health policy.</p>
-                    </div> </a>
-                <a href="iaea.html" style="text-decoration:none; color:inherit;" data-cat="special"> <div class="card">
-                        <span class="badge">Specialized Agency</span>
-                        <h3 style="font-size:22px; margin-top:10px;">IAEA</h3>
-                        <p style="margin-top:2px;">International Atomic Energy Agency</p>
-                        <p style="margin-top:12px;">Nuclear security, energy, and non-proliferation.</p>
-                    </div> </a>
-                <a href="america.html" style="text-decoration:none; color:inherit;" data-cat="crisis"> <div class="card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('assets/vedhalogom.png'); background-size: contain;">
-                        <span class="badge">Historical Crisis</span>
-                        <h3 style="font-size: 22px; margin-top: 10px; color: #ffffff;">Cuban Missile Crisis JCC</h3>
-                        <p style="margin-top: 2px; color: #ffffff;">Joint Crisis Committee</p>
-                        <p style="margin-top: 12px; color: #ffffff;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
-                        <div class="side-badges">
-                            <span class="badge badge-silver">American Cabinet</span>
-                        </div>
-                    </div> </a>
-                <a href="soviet.html" style="text-decoration:none; color:inherit;" data-cat="crisis"> <div class="card" style="background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('assets/nologojessicacolor.png'); background-position: center center; background-size: contain; background-repeat: repeat;">
-                        <span class="badge">Historical Crisis</span>
-                        <h3 style="font-size: 22px; margin-top: 10px; color: #ffffff;">Cuban Missile Crisis JCC</h3>
-                        <p style="margin-top: 2px; color: #ffffff;">Joint Crisis Committee</p>
-                        <p style="margin-top: 12px; color: #ffffff;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
-                        <div class="side-badges">
-                            <span class="badge badge-silver">Soviet Cabinet</span>
-                        </div>
-                    </div> </a>
-                <a href="tbd.html" style="text-decoration:none; color:inherit;" data-cat="ga special crisis"> <div class="card">
-                        <span class="badge">Committee</span>
-                        <h3 style="font-size:22px; margin-top:10px;">Name to be Confirmed</h3>
-                        <p style="margin-top:2px;">Topic to be confirmed</p>
-                        <p style="margin-top:12px;">More details will be announced by the Secretariat soon.</p>
-                    </div> </a>
+                <div class="card" data-cat="ga">
+                    <span class="badge">General Assembly</span>
+                    <h3 style="font-size:22px; margin-top:10px;">WHO</h3>
+                    <p style="margin-top:2px;">World Health Organization</p>
+                    <p style="margin-top:12px;">International public health and global health policy.</p>
+                </div>
+                <div class="card" data-cat="special">
+                    <span class="badge">Specialized Agency</span>
+                    <h3 style="font-size:22px; margin-top:10px;">IAEA</h3>
+                    <p style="margin-top:2px;">International Atomic Energy Agency</p>
+                    <p style="margin-top:12px;">Nuclear security, energy, and non-proliferation.</p>
+                </div>
+                <div class="card" data-cat="crisis">
+                    <span class="badge">Historical Crisis</span>
+                    <h3 style="font-size:22px; margin-top:10px;">Cuban Missile Crisis JCC</h3>
+                    <p style="margin-top:2px;">Joint Crisis Committee</p>
+                    <p style="margin-top:12px;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
+                    <div class="side-badges">
+                        <span class="badge badge-silver">American Cabinet</span>
+                    </div>
+                </div>
+                <div class="card" data-cat="crisis">
+                    <span class="badge">Historical Crisis</span>
+                    <h3 style="font-size:22px; margin-top:10px;">Cuban Missile Crisis JCC</h3>
+                    <p style="margin-top:2px;">Joint Crisis Committee</p>
+                    <p style="margin-top:12px;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
+                    <div class="side-badges">
+                        <span class="badge badge-silver">Soviet Cabinet</span>
+                    </div>
+                </div>
+                <div class="card" data-cat="ga special crisis">
+                    <span class="badge">Committee</span>
+                    <h3 style="font-size:22px; margin-top:10px;">Name to be Confirmed</h3>
+                    <p style="margin-top:2px;">Topic to be confirmed</p>
+                    <p style="margin-top:12px;">More details will be announced by the Secretariat soon.</p>
+                </div>
             </div>
         </div>
         <script>

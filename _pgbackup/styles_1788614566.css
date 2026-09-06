@@ -1851,19 +1851,3 @@ h3 {
     font-weight: 700;
     color: #486e8c;
 }
-
-.divider {
-    width: 92vw;
-
-    /* Takes up 92% of the screen width */
-    height: 5px;
-
-    /* Line thickness */
-    background-color: #ffffff;
-
-    /* White color */
-    margin: 0 auto;
-
-    /* Centers the line, leaving equal space on both sides */
-}
-
