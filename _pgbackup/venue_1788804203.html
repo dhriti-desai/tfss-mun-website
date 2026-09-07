@@ -1,0 +1,132 @@
+<!doctype html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Turner Fenton MUN | Venue</title>         
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles.css"> 
+        <style>.acc-item { border-bottom: 1px solid var(--line); } .acc-head { width: 100%; text-align: left; background: none; border: none; padding: 18px 2px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 15.5px; font-weight: 700; } .acc-head::after { content: '+'; color: var(--silver-dark); font-size: 18px; font-weight: 400; } .acc-item.open .acc-head::after { content: '-'; } .acc-body { max-height: 0; overflow: hidden; transition: max-height .2s ease; } .acc-item.open .acc-body { max-height: 240px; } .acc-body p { padding: 0 2px 18px; color: var(--text-soft); font-size: 14px; line-height: 1.6; }</style>         
+        <script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
+    </head>     
+    <body> 
+        <nav class="nav"> 
+            <div class="nav-inner"> 
+                <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)"> 
+      Turner Fenton MUN </a> 
+                <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>                 
+                <div class="navlinks" id="navlinks"> 
+                    <a href="secretariat.html">Secretariat</a> 
+                    <a href="committees.html">Committees</a> 
+                    <a href="schedule.html">Schedule</a> 
+                    <a href="venue.html" class="active">Venue</a> 
+                    <a href="position-papers.html">Position Papers</a> 
+                    <a href="awards.html">Awards</a> 
+                    <a href="faq.html">FAQ</a> 
+                    <a href="contact.html">Contact</a> 
+                    <a href="registration.html" class="nav-cta">Register Now</a> 
+                </div>                 
+            </div>             
+        </nav>         
+        <div class="page-banner" style="height: 300px; background-image: url('assets/MUN%20Banners%20(25).png'); background-position: center center; background-size: cover;"> 
+            <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()"> 
+            <h1>Venue & Location</h1> 
+            <p>Information about our conference location, directions, and facilities.</p> 
+        </div>         
+        <div class="header-transition-bar" style="background-color: #486e8c;"></div>         
+        <div class="section section-alt">
+            <div class="section-head">
+                <h2 style="font-family: 'ABeeZee', sans-serif;">Venue Map & Directions</h2>
+                <p>Find us at Turner Fenton Secondary School. Click "Directions" on the map for real-time navigation.</p>
+            </div>
+            <div class="map-container">
+                <iframe src="https://maps.google.com/maps?q=7935%20Kennedy%20Rd%20S,%20Brampton,%20ON%20L6W%200A2,%20Canada&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Turner Fenton Secondary School Location Map">
+</iframe>
+            </div>
+        </div>         
+        <div class="section section-alt" style="margin-top: -70px;"> 
+            <div class="section-head"> 
+                <h2 style="font-family: 'ABeeZee', sans-serif;">Venue Details & Logistics</h2> 
+            </div>             
+            <div id="accordion"> 
+                <div class="acc-item">
+                    <div class="acc-body">
+                        <p>Turner Fenton Secondary School is located at 7935 Kennedy Rd S, Brampton, ON L6X 0A8.</p>
+                    </div>
+                </div>
+                <div class="acc-item">
+                    <button class="acc-head" onclick="toggleAcc(this)">Are meals provided at the venue?</button>
+                    <div class="acc-body">
+                        <p>Lunch options and snack breaks will be available during conference hours. Details will be sent prior to the conference.</p>
+                    </div>
+                </div>                 
+                <div class="acc-item">
+                    <button class="acc-head" onclick="toggleAcc(this)">Food Spots Nearby</button>
+                    <div class="acc-body">
+                        <p>Tim Hortons, Starbucks, Subway, Harveys, Chick-fil-a, Freshii, Boba place (i cant remember..)</p>
+                    </div>
+                </div>                 
+                <div class="acc-item">
+                    <button class="acc-head" onclick="toggleAcc(this)">Where do delegates check in upon arrival?</button>
+                    <div class="acc-body">
+                        <p>Delegates should enter through the main entrance where the registration desk will be located.</p>
+                    </div>
+                </div>                 
+                <div class="acc-item">
+                    <div class="acc-body">
+                        <p>Lunch options and snack breaks will be available during conference hours. Details will be sent prior to the conference.</p>
+                    </div>
+                </div>                 
+                <div class="acc-item">
+                    <div class="acc-body">
+                        <p>Yes, all committee rooms and main assembly spaces are fully accessible.</p>
+                    </div>
+                </div>                 
+            </div>             
+        </div>         
+        <footer class="site-footer"> 
+            <div class="footer-inner"> 
+                <div> 
+                    <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;"> 
+                    <h5 style="margin-top:12px;">Turner Fenton MUN</h5> 
+                    <p>Turner Fenton Secondary School Model United Nations.</p> 
+                </div>                 
+                <div> 
+                    <h5>Conference</h5> 
+                    <a href="secretariat.html">Secretariat</a> 
+                    <a href="committees.html">Committees</a> 
+                    <a href="schedule.html">Schedule</a> 
+                    <a href="venue.html">Venue</a> 
+                    <a href="awards.html">Awards</a> 
+                </div>                 
+                <div> 
+                    <h5>Delegates</h5> 
+                    <a href="position-papers.html">Position Papers</a> 
+                    <a href="registration.html">Registration</a> 
+                    <a href="faq.html">FAQ</a> 
+                </div>                 
+                <div> 
+                    <h5>Connect</h5> 
+                    <a href="contact.html">Contact Us</a> 
+                    <a href="#">Instagram</a> 
+                </div>                 
+            </div>             
+            <div class="footer-bottom"> 
+                <span>Copyright 2026 Turner Fenton Model United Nations</span> 
+            </div>             
+        </footer>         
+        <script>
+function toggleAcc(head){ head.parentElement.classList.toggle('open'); }
+</script>         
+    </body>     
+</html>

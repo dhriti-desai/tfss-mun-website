@@ -7,85 +7,98 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles.css"> 
-        <style>
-            .side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
-            
-            /* Directors Grid Styling */
-            .directors-section { margin-bottom: 50px; }
-            .directors-grid {
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-                flex-wrap: wrap;
-                margin-top: 20px;
-            }
-            .director-card {
-                background: #ffffff;
-                border-radius: 8px;
-                padding: 16px;
-                width: 260px;
-                text-align: center;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            }
-            .director-img-wrapper {
-                width: 100%;
-                height: 280px;
-                overflow: hidden;
-                border-radius: 6px;
-                background-color: #e2e8f0;
-            }
-            .director-img-wrapper img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-            .director-info { margin-top: 12px; }
-            .director-info h3 { margin: 0; font-size: 18px; color: #1e293b; }
-            .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; }
+        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } /* Main Section Wrapper */.section { width: 100%; padding: 40px 24px; box-sizing: border-box; } .committee-container { max-width: 1350px; margin: 0 auto; } .committee-description h2 { margin-top: 0; margin-bottom: 24px; color: #1e293b; font-size: 32px; } /* Flexbox Container to Center Text Vertically Relative to Card */.committee-body { display: flex; flex-direction: row-reverse;  /* Places card on right, text on left */ align-items: center;  /* Vertically centers text relative to card */ justify-content: space-between; gap: 32px; } /* Text Wrapper */.committee-text { flex: 1; } .committee-text p { color: #1e293b; font-size: 17px; line-height: 1.75; margin-bottom: 20px; } .committee-text p:last-child { margin-bottom: 0; } /* Leadership Card Styling */.director-card-floated { width: 320px; max-width: 35%; min-width: 260px; flex-shrink: 0; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; text-align: center; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); } .director-img-wrapper { width: 100%; height: 340px; overflow: hidden; border-radius: 8px; background-color: #e2e8f0; } .director-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; } .director-info { margin-top: 14px; } .director-info h3 { margin: 0; font-size: 19px; color: #1e293b; font-weight: 700; } .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; } /* Background Guide Section Wrapper *//* Background Guide Section Wrapper */
+.bg-guide-section { 
+    margin-top: 50px; 
+    padding-top: 40px; 
+    border-top: 1px solid #e2e8f0; 
+} 
 
-            /* Content Grid (Description + Background Guide Placeholder) */
-            .committee-content-grid {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 40px;
-                align-items: start;
-            }
-            .bg-guide-card {
-                background: #ffffff;
-                border: 1px solid #e2e8f0;
-                border-radius: 8px;
-                padding: 20px;
-                text-align: center;
-            }
-            .bg-guide-preview {
-                width: 100%;
-                height: 220px;
-                background-color: #cbd5e1;
-                border-radius: 6px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #475569;
-                font-weight: 600;
-                margin-bottom: 15px;
-            }
-
-            @media (max-width: 768px) {
-                .committee-content-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>         
-        <script>
-function phFallback(img,label){
-  label = label || 'Picture';
-  var div = document.createElement('div');
-  div.className = img.className + ' ph';
-  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
-  img.replaceWith(div);
+/* Clearfix wrapper so the section wraps around all floated elements */
+.bg-guide-body::after {
+    content: "";
+    display: table;
+    clear: both;
 }
-</script>         
+
+/* Floated Card on the Left */
+.bg-guide-card { 
+    float: left;
+    width: 320px;
+    max-width: 35%;
+    min-width: 260px;
+    margin-right: 32px; /* Margin on the right so text doesn't touch the card */
+    margin-bottom: 24px;
+    background: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 12px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+    box-sizing: border-box;
+
+    /* Center cover and button vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.bg-guide-preview { 
+    width: 100%; 
+    height: 220px; 
+    background-color: #cbd5e1; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #475569; 
+    font-weight: 600; 
+    margin-bottom: 14px; 
+} 
+
+.bg-guide-card .nav-cta {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Text Content Styling */
+.bg-guide-text h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.bg-guide-text p {
+    font-size: 17px;
+    color: #1e293b;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .bg-guide-card {
+        float: none;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 24px auto;
+    }
+}</style>         
+        <script>
+        function phFallback(img,label){
+          label = label || 'Picture';
+          var div = document.createElement('div');
+          div.className = img.className + ' ph';
+          div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+          img.replaceWith(div);
+        }
+        </script>         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
     </head>     
     <body> 
         <nav class="nav"> 
@@ -113,44 +126,49 @@ function phFallback(img,label){
         </div>         
         <div class="header-transition-bar" style="background-position: center center; background-size: cover; background-color: #486e8c;"></div>         
         <div class="section"> 
-            <div class="directors-section">
-                <h2 style="text-align: center; margin-bottom: 20px;">Committee Leadership</h2>
-                <div class="directors-grid">
-                    <div class="director-card">
-                        <div class="director-img-wrapper">
-                            <img src="https://via.placeholder.com/300x400" alt="Director 1 Placeholder" onerror="phFallback(this, 'Director 1')">
-                        </div>
-                        <div class="director-info">
-                            <h3>Director Name</h3>
-                            <p>Co-Director</p>
-                        </div>
-                    </div>
-                    <div class="director-card">
-                        <div class="director-img-wrapper">
-                            <img src="https://via.placeholder.com/300x400" alt="Director 2 Placeholder" onerror="phFallback(this, 'Director 2')">
-                        </div>
-                        <div class="director-info">
-                            <h3>Director Name</h3>
-                            <p>Co-Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="committee-content-grid pinegrow-ui-helper-relative">
+            <div class="committee-container">
+                <!-- Main Description Section -->
                 <div class="committee-description">
-                    <h2>About the Committee</h2>
-                    <p style="color: #000000;">text</p>
-                    <p style="color: #000000;">text</p>
-                </div>
-                <div class="bg-guide-card">
-                    <div class="bg-guide-preview">
-                        <span>Background Guide Cover</span>
+                    <h2 style="font-family: 'ABeeZee', sans-serif; padding-bottom: 10px;">About the Committee & Leadership</h2>
+                    <div class="committee-body" style="margin-top: -50px; padding-bottom: 50px;">
+                        <!-- Leadership Card (Placed on Right via Flexbox) -->
+                        <div class="director-card-floated">
+                            <div class="director-img-wrapper">
+                                <img src="assets/DSC_5517.jpg" alt="Jessica" onerror="phFallback(this, 'Jessica')">
+                            </div>
+                            <div class="director-info">
+                                <h3>Tisya Sharma</h3>
+                                <p>Director</p>
+                            </div>
+                        </div>
+                        <!-- Vertically Centered Text Content -->
+                        <div class="committee-text">
+                            <p>My name is Tisya Sharma, and I am the director for the World Health Assembly  committee, WHA, at the TFSSMUN III iteration. Recently, developing a deep learning model for an optical disorder&rsquo;s detection has also sparked my interest in the governance dimension of Artificial Intelligence in medicine. Learning about the current groundbreaking research at the intersection of technology and medicine, especially in disease detection, has amazed me with the vast possibilities for healthcare&rsquo;s future.&nbsp;</p>
+                            <p>Yet, as with any emerging field, with new opportunities inevitably comes debate, and I&rsquo;m excited for this technical debate in an ever-evolving field to unfold. Being passionate about collaborating with diverse perspectives, I&rsquo;d been naturally drawn to MUN&rsquo;s exceptional bloc-based debate environment from the very start of my high school journey. When I&rsquo;m not engaged with MUN, technology, or school, you&rsquo;ll find me expressing my creative side through playing the piano, swimming, and travelling!&nbsp;&nbsp;</p>
+                        </div>
                     </div>
-                    <h3>Background Guide</h3>
-                    <p style="font-size: 14px; color: #64748b; margin-bottom: 15px;">Read the official background guide to prepare your position papers and debate strategies.</p>
-                    <a href="#" class="nav-cta" style="display: inline-block; padding: 10px 20px; text-decoration: none;">Download Guide</a>
+                </div>
+                <!-- Separate Background Guide Section Below -->
+                <div class="bg-guide-section" style="margin-top: -30px;">
+                    <div class="bg-guide-body">
+                        <!-- Background Guide Card Floated Left -->
+                        <div class="bg-guide-card">
+                            <div class="bg-guide-preview">
+                                <span>Background Guide Cover</span>
+                            </div>
+                            <a href="#" class="nav-cta">Download Guide</a>
+                        </div>
+                        <!-- Wrapped Text Content -->
+                        <div class="bg-guide-text">
+                            <h3 style="font-family: 'ABeeZee', sans-serif;">Specialized Agency - World Health Assembly (WHA)</h3>
+                            <p></p>
+                            <p>In an ever advancing world where technology and artificial intelligence (AI) are more present than ever, healthcare governance is pushed to determine the overall scope for incorporating AI within clinical application, and address an urgent question: To what extent do medical professionals rely on use and judgment of artificial intelligence? While highly effective at automating routine activities, and allowing healthcare workers to focus on more rigorous tasks, the fast-paced global adoption of this technology across critical industries is exposing repetitive patterns of data biases, model hallucinations, and even inaccurate diagnostic errors among others issues.&nbsp;</p>
+                            <p>With today&rsquo;s fact being more surreal than fiction, global leaders assemble at the World Health Assembly, the decision-making body of the World Health Organization (WHO), to settle the governance of the game-changing power AI brings to the medical field. Member states are drastically varying in their regulatory models for AI in healthcare, with some following an approach of commercial deployment of models to allow customised user experience, and others focusing on domestic control through enforcing strict mandates on AI. Together, the states must navigate through the fine boundary between safety and progress and reach consensus in policies that balance innovation with regulation of artificial intelligence. Even once an AI regulation approach is established, many regions remain outpaced due to inadequate digital infrastructure, funding, or technical capacity. Effective governance requires both regulation and equity, and it is up to the states to determine funding mechanisms and guidelines that support equitable deployment of technology in healthcare across all regions.&nbsp;</p>
+                            <p>In this budding field, decisions will not only set current policies but pave the path for the future of digital healthcare. The only question remaining now is, are you ready to bring your highest creative vision, academic-rigor and diplomacy to the most discussed topic of 2026? Because when it comes to saving lives, error is not an option.&nbsp;</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>     
-</html>
+    </div>
+</div>

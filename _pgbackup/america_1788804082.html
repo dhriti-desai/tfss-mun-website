@@ -1,0 +1,157 @@
+<!doctype html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Turner Fenton MUN | America Crisis</title>         
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles.css"> 
+        <style>
+            .side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+            
+            /* Container cleared for floats */
+            .text-wrap-container {
+                overflow: hidden; /* Clears floats inside */
+                margin-bottom: 40px;
+            }
+
+            /* Director Floating Card Styling */
+            .director-card-floated {
+                float: left;
+                width: 260px;
+                margin-right: 28px;
+                margin-bottom: 20px;
+                background: #ffffff;
+                border-radius: 8px;
+                padding: 16px;
+                text-align: center;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            }
+
+            .director-img-wrapper {
+                width: 100%;
+                height: 280px;
+                overflow: hidden;
+                border-radius: 6px;
+                background-color: #e2e8f0;
+            }
+
+            .director-img-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+            .director-info { margin-top: 12px; }
+            .director-info h3 { margin: 0; font-size: 18px; color: #1e293b; }
+            .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; }
+
+            /* Grid for Main Text + Background Guide */
+            .committee-content-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 40px;
+                align-items: start;
+            }
+
+            .bg-guide-card {
+                background: #ffffff;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+            }
+
+            .bg-guide-preview {
+                width: 100%;
+                height: 220px;
+                background-color: #cbd5e1;
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #475569;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 768px) {
+                .committee-content-grid {
+                    grid-template-columns: 1fr;
+                }
+                .director-card-floated {
+                    float: none;
+                    width: 100%;
+                    max-width: 300px;
+                    margin: 0 auto 20px auto;
+                }
+            }
+        </style>         
+        <script>
+        function phFallback(img,label){
+          label = label || 'Picture';
+          var div = document.createElement('div');
+          div.className = img.className + ' ph';
+          div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+          img.replaceWith(div);
+        }
+        </script>         
+    </head>     
+    <body> 
+        <nav class="nav"> 
+            <div class="nav-inner"> 
+                <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)"> 
+                Turner Fenton MUN  </a> 
+                <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>                 
+                <div class="navlinks" id="navlinks"> 
+                    <a href="secretariat.html">Secretariat</a> 
+                    <a href="committees.html">Committees</a> 
+                    <a href="schedule.html">Schedule</a> 
+                    <a href="venue.html">Venue</a> 
+                    <a href="position-papers.html">Position Papers</a> 
+                    <a href="awards.html">Awards</a> 
+                    <a href="faq.html">FAQ</a> 
+                    <a href="contact.html">Contact</a> 
+                    <a href="registration.html" class="nav-cta">Register Now</a> 
+                </div>                 
+            </div>             
+        </nav>         
+        <div class="page-banner" style="background-position: center center; background-size: cover; height: 300px;"> 
+            <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()"> 
+            <h1>Cuban Missile Crisis JCC</h1> 
+            <p>American Cabinet</p> 
+        </div>         
+        <div class="header-transition-bar" style="background-position: center center; background-size: cover; background-color: #486e8c;"></div>         
+        <div class="section"> 
+            <div class="committee-content-grid pinegrow-ui-helper-relative">
+                <!-- Left Column (Wrapped Content) -->
+                <div class="committee-description">
+                    <h2>About the Committee & Leadership</h2>
+                    <!-- Floated Card Inside Text Flow -->
+                    <div class="director-card-floated">
+                        <div class="director-img-wrapper">
+                            <img src="https://via.placeholder.com/300x400" alt="Director 1 Placeholder" onerror="phFallback(this, 'Director 1')">
+                        </div>
+                        <div class="director-info">
+                            <h3>Director Name</h3>
+                            <p>Co-Director</p>
+                        </div>
+                    </div>
+                    <p style="color: #000000;">My name is Vedha Panchal, and I have the honour of serving as Under-Secretary-General of Crisis for TFSSMUN. The Cuban Missile Crisis first captured my attention through my studies in IB History, where I found myself less interested in the broad strokes of Cold War politics and more drawn to the thirteen days in October 1962 where the world sat at the brink of nuclear war. The decisions made in those rooms felt less like history and more like a masterclass in crisis leadership. That is what brought this committee to life.&nbsp;</p>
+                    <p style="color: #000000;">Outside of academics and MUN, I founded BlueKnot, an organization supporting neurodivergent individuals. I enjoy playing flag football, volleyball and tennis and have a passion for sketching, writing poetry, and dancing. I believe the best crisis committees do what good literature does: they put people in impossible situations and reveal something true about how we make decisions under pressure. Welcome to the room where it happened!</p>
+                </div>
+                <!-- Right Column (Background Guide Card) -->
+                <div class="bg-guide-card">
+                    <div class="bg-guide-preview">
+                        <span>Background Guide Cover</span>
+                    </div>
+                    <h3>Background Guide</h3>
+                    <p style="font-size: 14px; color: #64748b; margin-bottom: 15px;">Read the official background guide to prepare your position papers and debate strategies.</p>
+                    <a href="#" class="nav-cta" style="display: inline-block; padding: 10px 20px; text-decoration: none;">Download Guide</a>
+                </div>
+            </div>
+        </div>
+    </body>     
+</html>

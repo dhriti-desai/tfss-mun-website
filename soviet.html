@@ -7,85 +7,98 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles.css"> 
-        <style>
-            .side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
-            
-            /* Directors Grid Styling */
-            .directors-section { margin-bottom: 50px; }
-            .directors-grid {
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-                flex-wrap: wrap;
-                margin-top: 20px;
-            }
-            .director-card {
-                background: #ffffff;
-                border-radius: 8px;
-                padding: 16px;
-                width: 260px;
-                text-align: center;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            }
-            .director-img-wrapper {
-                width: 100%;
-                height: 280px;
-                overflow: hidden;
-                border-radius: 6px;
-                background-color: #e2e8f0;
-            }
-            .director-img-wrapper img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-            .director-info { margin-top: 12px; }
-            .director-info h3 { margin: 0; font-size: 18px; color: #1e293b; }
-            .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; }
+        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } /* Main Section Wrapper */.section { width: 100%; padding: 40px 24px; box-sizing: border-box; } .committee-container { max-width: 1350px; margin: 0 auto; } .committee-description h2 { margin-top: 0; margin-bottom: 24px; color: #1e293b; font-size: 32px; } /* Flexbox Container to Center Text Vertically Relative to Card */.committee-body { display: flex; flex-direction: row-reverse;  /* Places card on right, text on left */ align-items: center;  /* Vertically centers text relative to card */ justify-content: space-between; gap: 32px; } /* Text Wrapper */.committee-text { flex: 1; } .committee-text p { color: #1e293b; font-size: 17px; line-height: 1.75; margin-bottom: 20px; } .committee-text p:last-child { margin-bottom: 0; } /* Leadership Card Styling */.director-card-floated { width: 320px; max-width: 35%; min-width: 260px; flex-shrink: 0; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; text-align: center; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); } .director-img-wrapper { width: 100%; height: 340px; overflow: hidden; border-radius: 8px; background-color: #e2e8f0; } .director-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; } .director-info { margin-top: 14px; } .director-info h3 { margin: 0; font-size: 19px; color: #1e293b; font-weight: 700; } .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; } /* Background Guide Section Wrapper *//* Background Guide Section Wrapper */
+.bg-guide-section { 
+    margin-top: 50px; 
+    padding-top: 40px; 
+    border-top: 1px solid #e2e8f0; 
+} 
 
-            /* Content Grid (Description + Background Guide Placeholder) */
-            .committee-content-grid {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 40px;
-                align-items: start;
-            }
-            .bg-guide-card {
-                background: #ffffff;
-                border: 1px solid #e2e8f0;
-                border-radius: 8px;
-                padding: 20px;
-                text-align: center;
-            }
-            .bg-guide-preview {
-                width: 100%;
-                height: 220px;
-                background-color: #cbd5e1;
-                border-radius: 6px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #475569;
-                font-weight: 600;
-                margin-bottom: 15px;
-            }
-
-            @media (max-width: 768px) {
-                .committee-content-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>         
-        <script>
-function phFallback(img,label){
-  label = label || 'Picture';
-  var div = document.createElement('div');
-  div.className = img.className + ' ph';
-  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
-  img.replaceWith(div);
+/* Clearfix wrapper so the section wraps around all floated elements */
+.bg-guide-body::after {
+    content: "";
+    display: table;
+    clear: both;
 }
-</script>         
+
+/* Floated Card on the Left */
+.bg-guide-card { 
+    float: left;
+    width: 320px;
+    max-width: 35%;
+    min-width: 260px;
+    margin-right: 32px; /* Margin on the right so text doesn't touch the card */
+    margin-bottom: 24px;
+    background: #ffffff; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 12px; 
+    padding: 20px; 
+    text-align: center; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+    box-sizing: border-box;
+
+    /* Center cover and button vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+
+.bg-guide-preview { 
+    width: 100%; 
+    height: 220px; 
+    background-color: #cbd5e1; 
+    border-radius: 8px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    color: #475569; 
+    font-weight: 600; 
+    margin-bottom: 14px; 
+} 
+
+.bg-guide-card .nav-cta {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* Text Content Styling */
+.bg-guide-text h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 28px;
+    color: #1e293b;
+}
+
+.bg-guide-text p {
+    font-size: 17px;
+    color: #1e293b;
+    line-height: 1.75;
+    margin-bottom: 18px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .bg-guide-card {
+        float: none;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto 24px auto;
+    }
+}</style>         
+        <script>
+        function phFallback(img,label){
+          label = label || 'Picture';
+          var div = document.createElement('div');
+          div.className = img.className + ' ph';
+          div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+          img.replaceWith(div);
+        }
+        </script>         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
     </head>     
     <body> 
         <nav class="nav"> 
@@ -113,44 +126,51 @@ function phFallback(img,label){
         </div>         
         <div class="header-transition-bar" style="background-position: center center; background-size: cover; background-color: #486e8c;"></div>         
         <div class="section"> 
-            <div class="directors-section">
-                <h2 style="text-align: center; margin-bottom: 20px;">Committee Leadership</h2>
-                <div class="directors-grid">
-                    <div class="director-card">
-                        <div class="director-img-wrapper">
-                            <img src="https://via.placeholder.com/300x400" alt="Director 1 Placeholder" onerror="phFallback(this, 'Director 1')">
-                        </div>
-                        <div class="director-info">
-                            <h3>Director Name</h3>
-                            <p>Co-Director</p>
-                        </div>
-                    </div>
-                    <div class="director-card">
-                        <div class="director-img-wrapper">
-                            <img src="https://via.placeholder.com/300x400" alt="Director 2 Placeholder" onerror="phFallback(this, 'Director 2')">
-                        </div>
-                        <div class="director-info">
-                            <h3>Director Name</h3>
-                            <p>Co-Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="committee-content-grid pinegrow-ui-helper-relative">
+            <div class="committee-container">
+                <!-- Main Description Section -->
                 <div class="committee-description">
-                    <h2>About the Committee</h2>
-                    <p style="color: #000000;">text</p>
-                    <p style="color: #000000;">text</p>
-                </div>
-                <div class="bg-guide-card">
-                    <div class="bg-guide-preview">
-                        <span>Background Guide Cover</span>
+                    <h2 style="font-family: 'ABeeZee', sans-serif; padding-bottom: 10px;">About the Committee & Leadership</h2>
+                    <div class="committee-body" style="margin-top: -50px; padding-bottom: 50px;">
+                        <!-- Leadership Card (Placed on Right via Flexbox) -->
+                        <div class="director-card-floated">
+                            <div class="director-img-wrapper">
+                                <img src="assets/DSC_5511.jpg" alt="Jessica" onerror="phFallback(this, 'Jessica')">
+                            </div>
+                            <div class="director-info">
+                                <h3>Jessica Ramsaran</h3>
+                                <p>Director</p>
+                            </div>
+                        </div>
+                        <!-- Vertically Centered Text Content -->
+                        <div class="committee-text">
+                            <p>My name is Jessica Ramsaran and I am your director for the JCC -  Soviet Missile Crisis in the 2027 iteration of TurnerMUN. Historically I find it fascinating to research about the Cuban Missile Crisis and the immense effect it had on the cold war in being an utter superpower crisis. As I&rsquo;ve learned more about history I find the Cuban Missile Crisis to be one of the most interesting and misunderstood crises during the cold war.</p>
+                            <p>My passions include public speaking, ventures in parliament, MUN, FBLC, Evangelism + more. Furthermore, MUN has been a groundbreaking experience for me that I believe everyone should experience at least once as it has helped me to grow immensely in the skills of debate, public speaking, problem solving and much more. As a first year delegate achieving milestone honors to now being your director it is my honor to lead such an active committee at TurnerMUN.&nbsp;</p>
+                        </div>
                     </div>
-                    <h3>Background Guide</h3>
-                    <p style="font-size: 14px; color: #64748b; margin-bottom: 15px;">Read the official background guide to prepare your position papers and debate strategies.</p>
-                    <a href="#" class="nav-cta" style="display: inline-block; padding: 10px 20px; text-decoration: none;">Download Guide</a>
+                </div>
+                <!-- Separate Background Guide Section Below -->
+                <div class="bg-guide-section" style="margin-top: -30px;">
+                    <div class="bg-guide-body">
+                        <!-- Background Guide Card Floated Left -->
+                        <div class="bg-guide-card">
+                            <div class="bg-guide-preview">
+                                <span>Background Guide Cover</span>
+                            </div>
+                            <a href="#" class="nav-cta">Download Guide</a>
+                        </div>
+                        <!-- Wrapped Text Content -->
+                        <div class="bg-guide-text">
+                            <h3 style="font-family: 'ABeeZee', sans-serif;">JCC Cuban Missile Crisis: Soviet Union</h3>
+                            <p><b>this is js copy pasted cuz jessica&apos;s was not attached</b></p>
+                            <p>In October 1962, the Cold War reached its most dangerous moment. When U.S. reconnaissance revealed Soviet nuclear missile sites being built in Cuba, the balance of the Cold War shifted overnight. Nuclear weapons were now just 90 miles from American shores. The discovery came after U.S. reconnaissance flights captured photographic evidence of Soviet missile installations being constructed on the island. The Soviet Union could soon possess the ability to strike much of the United States from just 90 miles away.</p>
+                            <p>With the information still highly classified and the American public unaware of the threat, Kennedy assembled his most trusted military, diplomatic, and intelligence advisors—the Executive Committee of the National Security Council (ExComm). The United States has yet to make its first move.</p>
+                            <p>Thirteen days. Two superpowers. One world on the brink.</p>
+                            <p>As members of the Executive Committee, you are no longer observers of history—you are inside the room where history is being made. Every decision carries consequences: negotiate with the Soviets, impose further pressure, launch military action, pursue covert operations, or risk nuclear escalation.</p>
+                            <p>There is no script, no guaranteed outcome, and no second chance. The missiles are real. The clock is ticking. And the next move is yours.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>     
-</html>
+    </div>
+</div>

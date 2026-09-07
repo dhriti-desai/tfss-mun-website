@@ -7,7 +7,76 @@
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles.css"> 
-        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } /* Directors Grid Styling */.directors-section { margin-bottom: 50px; } .directors-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 20px; } .director-card { background: #ffffff; border-radius: 8px; padding: 16px; width: 260px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.05); } .director-img-wrapper { width: 100%; height: 280px; overflow: hidden; border-radius: 6px; background-color: #e2e8f0; } .director-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; } .director-info { margin-top: 12px; } .director-info h3 { margin: 0; font-size: 18px; color: #1e293b; } .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; } /* Content Grid (Description + Background Guide Placeholder) */.committee-content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start; } .bg-guide-card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 20px; text-align: center; } .bg-guide-preview { width: 100%; height: 220px; background-color: #cbd5e1; border-radius: 6px; display: flex; align-items: center; justify-content: center; color: #475569; font-weight: 600; margin-bottom: 15px; } @media (max-width: 768px) { .committee-content-grid {  grid-template-columns: 1fr; } }</style>         
+        <style>
+            .side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+            
+            /* Directors Grid Styling */
+            .directors-section { margin-bottom: 50px; }
+            .directors-grid {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+                margin-top: 20px;
+            }
+            .director-card {
+                background: #ffffff;
+                border-radius: 8px;
+                padding: 16px;
+                width: 260px;
+                text-align: center;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            }
+            .director-img-wrapper {
+                width: 100%;
+                height: 280px;
+                overflow: hidden;
+                border-radius: 6px;
+                background-color: #e2e8f0;
+            }
+            .director-img-wrapper img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+            .director-info { margin-top: 12px; }
+            .director-info h3 { margin: 0; font-size: 18px; color: #1e293b; }
+            .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; }
+
+            /* Content Grid (Description + Background Guide Placeholder) */
+            .committee-content-grid {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 40px;
+                align-items: start;
+            }
+            .bg-guide-card {
+                background: #ffffff;
+                border: 1px solid #e2e8f0;
+                border-radius: 8px;
+                padding: 20px;
+                text-align: center;
+            }
+            .bg-guide-preview {
+                width: 100%;
+                height: 220px;
+                background-color: #cbd5e1;
+                border-radius: 6px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #475569;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            @media (max-width: 768px) {
+                .committee-content-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>         
         <script>
 function phFallback(img,label){
   label = label || 'Picture';

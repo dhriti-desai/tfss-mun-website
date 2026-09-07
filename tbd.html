@@ -8,84 +8,117 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="styles.css"> 
         <style>
-            .side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; }
+            .side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } 
             
-            /* Directors Grid Styling */
-            .directors-section { margin-bottom: 50px; }
-            .directors-grid {
-                display: flex;
-                justify-content: center;
-                gap: 30px;
-                flex-wrap: wrap;
-                margin-top: 20px;
-            }
-            .director-card {
-                background: #ffffff;
-                border-radius: 8px;
-                padding: 16px;
-                width: 260px;
-                text-align: center;
-                box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            }
-            .director-img-wrapper {
-                width: 100%;
-                height: 280px;
-                overflow: hidden;
-                border-radius: 6px;
-                background-color: #e2e8f0;
-            }
-            .director-img-wrapper img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-            }
-            .director-info { margin-top: 12px; }
-            .director-info h3 { margin: 0; font-size: 18px; color: #1e293b; }
-            .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; }
+            /* Main Section Wrapper */
+            .section { width: 100%; padding: 40px 24px; box-sizing: border-box; } 
+            .committee-container { max-width: 1350px; margin: 0 auto; } 
+            .committee-description h2 { margin-top: 0; margin-bottom: 24px; color: #1e293b; font-size: 32px; } 
+            
+            /* Flexbox Container to Center Text Vertically Relative to Card */
+            .committee-body { display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between; gap: 32px; } 
+            
+            /* Text Wrapper */
+            .committee-text { flex: 1; } 
+            .committee-text p { color: #1e293b; font-size: 17px; line-height: 1.75; margin-bottom: 20px; } 
+            .committee-text p:last-child { margin-bottom: 0; } 
+            
+            /* Leadership Card Styling */
+            .director-card-floated { width: 320px; max-width: 35%; min-width: 260px; flex-shrink: 0; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; text-align: center; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); } 
+            .director-img-wrapper { width: 100%; height: 340px; overflow: hidden; border-radius: 8px; background-color: #e2e8f0; } 
+            .director-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; } 
+            .director-info { margin-top: 14px; } 
+            .director-info h3 { margin: 0; font-size: 19px; color: #1e293b; font-weight: 700; } 
+            .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; } 
 
-            /* Content Grid (Description + Background Guide Placeholder) */
-            .committee-content-grid {
-                display: grid;
-                grid-template-columns: 2fr 1fr;
-                gap: 40px;
-                align-items: start;
+            /* Background Guide Section Wrapper */
+            .bg-guide-section { 
+                margin-top: 50px; 
+                padding-top: 40px; 
+                border-top: 1px solid #e2e8f0; 
+            } 
+
+            /* Clearfix wrapper so text wraps around floated elements */
+            .bg-guide-body::after {
+                content: "";
+                display: table;
+                clear: both;
             }
-            .bg-guide-card {
-                background: #ffffff;
-                border: 1px solid #e2e8f0;
-                border-radius: 8px;
-                padding: 20px;
-                text-align: center;
-            }
-            .bg-guide-preview {
-                width: 100%;
-                height: 220px;
-                background-color: #cbd5e1;
-                border-radius: 6px;
+
+            /* Floated Card on the Right */
+            .bg-guide-card-right { 
+                float: right;
+                width: 320px;
+                max-width: 35%;
+                min-width: 260px;
+                margin-left: 32px;  /* Margin on the left side where text wraps */
+                margin-bottom: 24px;
+                background: #ffffff; 
+                border: 1px solid #e2e8f0; 
+                border-radius: 12px; 
+                padding: 20px; 
+                text-align: center; 
+                box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+                box-sizing: border-box;
+
                 display: flex;
+                flex-direction: column;
                 align-items: center;
-                justify-content: center;
-                color: #475569;
-                font-weight: 600;
-                margin-bottom: 15px;
+            } 
+
+            .bg-guide-preview { 
+                width: 100%; 
+                height: 220px; 
+                background-color: #cbd5e1; 
+                border-radius: 8px; 
+                display: flex; 
+                align-items: center; 
+                justify-content: center; 
+                color: #475569; 
+                font-weight: 600; 
+                margin-bottom: 14px; 
+            } 
+
+            .bg-guide-card-right .nav-cta {
+                display: inline-block;
+                width: 100%;
+                text-align: center;
+                padding: 10px 0;
+                text-decoration: none;
+                box-sizing: border-box;
             }
 
+            /* Background Guide Paragraph Styling Matching Director Bios */
+            .bg-guide-text p {
+                color: #1e293b;
+                font-size: 17px;
+                line-height: 1.75;
+                margin-bottom: 20px;
+            }
+            .bg-guide-text p:last-child {
+                margin-bottom: 0;
+            }
+
+            /* Mobile Responsiveness */
             @media (max-width: 768px) {
-                .committee-content-grid {
-                    grid-template-columns: 1fr;
+                .bg-guide-card-right {
+                    float: none;
+                    width: 100%;
+                    max-width: 320px;
+                    margin: 0 auto 24px auto;
                 }
             }
         </style>         
         <script>
-function phFallback(img,label){
-  label = label || 'Picture';
-  var div = document.createElement('div');
-  div.className = img.className + ' ph';
-  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
-  img.replaceWith(div);
-}
-</script>         
+        function phFallback(img,label){
+          label = label || 'Picture';
+          var div = document.createElement('div');
+          div.className = img.className + ' ph';
+          div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+          img.replaceWith(div);
+        }
+        </script>         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
     </head>     
     <body> 
         <nav class="nav"> 
@@ -113,44 +146,63 @@ function phFallback(img,label){
         </div>         
         <div class="header-transition-bar" style="background-position: center center; background-size: cover; background-color: #486e8c;"></div>         
         <div class="section"> 
-            <div class="directors-section">
-                <h2 style="text-align: center; margin-bottom: 20px;">Committee Leadership</h2>
-                <div class="directors-grid">
-                    <div class="director-card">
-                        <div class="director-img-wrapper">
-                            <img src="https://via.placeholder.com/300x400" alt="Director 1 Placeholder" onerror="phFallback(this, 'Director 1')">
-                        </div>
-                        <div class="director-info">
-                            <h3>Director Name</h3>
-                            <p>Co-Director</p>
-                        </div>
-                    </div>
-                    <div class="director-card">
-                        <div class="director-img-wrapper">
-                            <img src="https://via.placeholder.com/300x400" alt="Director 2 Placeholder" onerror="phFallback(this, 'Director 2')">
-                        </div>
-                        <div class="director-info">
-                            <h3>Director Name</h3>
-                            <p>Co-Director</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="committee-content-grid pinegrow-ui-helper-relative">
+            <div class="committee-container">
+                <!-- Main Description Section -->
                 <div class="committee-description">
-                    <h2>About the Committee</h2>
-                    <p style="color: #000000;">text</p>
-                    <p style="color: #000000;">text</p>
-                </div>
-                <div class="bg-guide-card">
-                    <div class="bg-guide-preview">
-                        <span>Background Guide Cover</span>
+                    <h2 style="font-family: 'ABeeZee', sans-serif; font-size: 35px;">About the Committee &amp; Leadership</h2>
+                    <div class="committee-body" style="margin-top: -50px; padding-bottom: 50px;">
+                        <!-- Leadership Card (Placed on Right via Flexbox) -->
+                        <div class="director-card-floated">
+                            <div class="director-img-wrapper">
+                                <img src="assets/DSC_5536.jpg" alt="Jessica" onerror="phFallback(this, 'Jessica')">
+                            </div>
+                            <div class="director-info">
+                                <h3>Yash Tomar</h3>
+                                <p>Director</p>
+                            </div>
+                        </div>
+                        <!-- Vertically Centered Text Content -->
+                        <div class="committee-text">
+                            <p>My name is Yash Tomar, and I am serving as your Co-Director for &apos;Hollywood: Beyond the Spotlight&apos; at TFSSMUN. Currently, I&rsquo;m a Grade 11 International Baccalaureate student at Turner Fenton Secondary School. From my earliest memories, film has been a deep passion. That passion drew me to this committee to explore how technology, security, and ethics intersect across the entertainment industry, rather than focusing on just one corner. This is my third year in Model United Nations, yet my first time directing. The friendships and community I&apos;ve built along the way have made the journey truly worthwhile. Outside of MUN, I train as an amateur boxer, spend a lot of my time listening to Future and Radiohead, and have a genuine love for birds. I look forward to seeing how delegates navigate the crisis and lead the committee.</p>
+                        </div>
                     </div>
-                    <h3>Background Guide</h3>
-                    <p style="font-size: 14px; color: #64748b; margin-bottom: 15px;">Read the official background guide to prepare your position papers and debate strategies.</p>
-                    <a href="#" class="nav-cta" style="display: inline-block; padding: 10px 20px; text-decoration: none;">Download Guide</a>
+                    <div class="committee-body" style="margin-top: -50px; padding-bottom: 50px; flex-direction: row;">
+                        <!-- Leadership Card (Placed on Left via HTML order and flex-direction: row) -->
+                        <div class="director-card-floated">
+                            <div class="director-img-wrapper">
+                                <img src="assets/DSC_5527.jpg" alt="Jessica" onerror="phFallback(this, 'Jessica')">
+                            </div>
+                            <div class="director-info">
+                                <h3>Nitisha Jain</h3>
+                                <p>Director</p>
+                            </div>
+                        </div>
+                        <!-- Text Content -->
+                        <div class="committee-text">
+                            <p>My name is Nitisha Jain, a Grade 11 International Baccalaureate student at Turner Fenton Secondary School, serving as your Co- Director for &ldquo;Hollywood: Beyond the Spotlight&rdquo;. I have spent countless hours completely lost in movies and shows, so directing a committee about the hidden side of Hollywood feels fitting. As a second-year delegate and first-time director, I&rsquo;m drawn to the dramatic contrast of this committee, much like my favorite color, red; that dynamic between elegance and danger is the energy delegates will step into.  Beyond school and MUN, running my nail business, blast music, and express myself through dancing and swimming. Between having a soft spot for animals and creating memories with my family and friends, I&apos;m all about making great connections. I can&apos;t wait to see who steals the scene, flips the script, and steals the spotlight!</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Separate Background Guide Section Below -->
+                <div class="bg-guide-section" style="margin-top: -30px;">
+                    <div class="bg-guide-body">
+                        <!-- Background Guide Card Floated Right -->
+                        <div class="bg-guide-card-right">
+                            <div class="bg-guide-preview">
+                                <span>Background Guide Cover</span>
+                            </div>
+                            <a href="#" class="nav-cta">Download Guide</a>
+                        </div>
+                        <!-- Wrapped Text Content -->
+                        <div class="bg-guide-text">
+                            <h3 style="font-family: 'ABeeZee', sans-serif; font-size: 35px; margin-top: 0; margin-bottom: 24px; color: #1e293b;">Hollywood: Beyond The Spotlight</h3>
+                            <p>Who owns a masterpiece when the artist is a machine? Hollywood stands at a critical intersection, caught between the promise of artificial intelligence and the human cost of its arrival. In high-stakes boardrooms across the Alliance of Motion Picture and Television Producers (AMPTP), studio executives face a defining question: how does an industry built on human imagination survive its own technological reinvention?</p>
+                            <p>Delegates will step into the shoes of major studio executives as they navigate two core disruptions threatening the foundations of the silver screen. First, generative AI offers unprecedented speed and leaner budgets across visual effects, animation, and post-production. However, this efficiency demands a reckoning over worker displacement, massive energy costs from computing infrastructure, and unresolved copyright battles over training data. Second, sprawling global networks of outsourced VFX houses, streaming platforms, and international co-productions have left intellectual property vulnerable. A single leaked frame or stolen script can unravel millions in revenue overnight, leaving studios to decide who bears the financial blame when third-party security fails.</p>
+                            <p>Delegates face a high-stakes mandate: leveraging cutting-edge technology without abandoning the creative workforce, while fortifying global production pipelines against piracy and betrayal. Delegates must collaborate to establish industry-wide security benchmarks, balance studio bottom lines with labor stability, and resolve complex intellectual property disputes. Profit, ethics, and innovation will collide in every negotiation. The question is not whether Hollywood will change, but who gets to decide how, and at what cost.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </body>     
+    </body>
 </html>
