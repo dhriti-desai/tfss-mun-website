@@ -3,18 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Turner Fenton MUN | Position Papers</title>
+        <title>Turner Fenton MUN | Registration</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <style>
-            .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; } 
-            @media (max-width:800px){ .steps { grid-template-columns: 1fr 1fr; } } 
-            .step-num { font-weight: 700; color: var(--silver-dark); font-size: 13px; } 
-            .rubric { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; } 
-            .rubric th, .rubric td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); } 
-            .rubric th { font-size: 12px; text-transform: uppercase; color: var(--text-soft); font-weight: 700; } 
-            .download-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--grey-bg); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-top: 32px; flex-wrap: wrap; }
+            .price-card { border: 1px solid var(--line); border-radius: 12px; padding: 28px; background: var(--white); } 
+            .price-card.featured { border-color: var(--ink); background: var(--ink); color: var(--white); border-top: 4px solid var(--silver); } 
+            .price-card.featured p { color: #C7CCD6; } 
+            .price-amt { font-size: 32px; font-weight: 800; margin-top: 10px; } 
+            .price-list { margin-top: 16px; font-size: 13.5px; line-height: 2; } 
+            .timeline { margin-top: 16px; border-left: 2px solid var(--line); padding-left: 22px; display: flex; flex-direction: column; gap: 22px; } 
+            .tl-item { position: relative; } 
+            .tl-item::before { content: ''; position: absolute; left: -28px; top: 4px; width: 9px; height: 9px; border-radius: 50%; background: var(--ink); } 
+            .tl-date { font-size: 12.5px; font-weight: 700; color: var(--silver-dark); }
 
             /* Overlay Styles */
             .overlay-container {
@@ -53,14 +55,14 @@
             }
         </style>
         <script>
-        function phFallback(img,label){
-          label = label || 'Picture';
-          var div = document.createElement('div');
-          div.className = img.className + ' ph';
-          div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
-          img.replaceWith(div);
-        }
-        </script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
     </head>
     <body>
@@ -86,57 +88,59 @@
         <div class="overlay-container">
             <!-- OVERLAY ELEMENT -->
             <div class="coming-soon-overlay">
-                <span style="font-family: 'ABeeZee', sans-serif;">coming soon...</span>
+                <span style="font-family: 'ABeeZee', sans-serif;">TFSSMUN III coming soon...</span>
             </div>
-            <div class="page-banner" style="background-image: url('banners/position-papers.png'); background-position: center center; background-size: cover; height: 300px;">
+            <div class="page-banner" style="background-position: center center; background-size: cover; height: 300px; background-image: url('banners/registration.png');">
                 <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
-                <h1>Position Papers</h1>
-                <p>What is required, how it is graded, and where to send it.</p>
+                <h1>Registration</h1>
+                <p>Fees, deadlines, and how schools sign up for our one day conference.</p>
             </div>
             <div class="header-transition-bar" style="background-color: #486e8c;"></div>
             <div class="section">
-                <div class="section-head">
-                    <h2 style="font-family: 'ABeeZee', sans-serif; font-size: 35px; color: #486e8c;">Submission Timeline</h2>
+                <div class="grid grid-3">
+                    <div class="price-card">
+                        <span class="badge">Delegate</span>
+                        <div class="price-amt" style="color: #0a1e35;">$XX</div>
+                        <p class="" style="color: #0a1e35;">Per individual delegate</p>
+                        <div class="price-list" style="color: #0a1e35;">Committee placement<br>Delegate handbook<br>Lunch included
+                        </div>
+                    </div>
+                    <div class="price-card featured" style="background-color: #0a1e35;">
+                        <span class="badge badge-silver">Delegation</span>
+                        <div class="price-amt">$XX</div>
+                        <p>Per school, 10 or more delegates</p>
+                        <div class="price-list">Everything above<br>Reserved country group<br>Faculty advisor pass
+                        </div>
+                    </div>
+                    <div class="price-card">
+                        <span class="badge">Observer</span>
+                        <div class="price-amt" style="color: #0a1e35;">$XX</div>
+                        <p style="color: #0a1e35;">Non competing guest</p>
+                        <div class="price-list" style="color: #0a1e35;">Committee access<br>Opening and closing ceremony
+                        </div>
+                    </div>
                 </div>
-                <div class="steps" style="margin-top: -20px;">
-                    <div class="card">
-                        <div class="step-num">Step 1</div>
-                        <h3 style="font-size:15px; margin-top:6px;">release date</h3>
+                <div class="timeline">
+                    <div class="tl-item">
+                        <div class="tl-date">Date</div>
+                        <h3 style="font-size:15px; margin-top:2px;">Registration opens</h3>
                     </div>
-                    <div class="card">
-                        <div class="step-num">Step 2</div>
-                        <h3 style="font-size:15px; margin-top:6px;">can ask quesitons</h3>
+                    <div class="tl-item">
+                        <div class="tl-date">Date</div>
+                        <h3 style="font-size:15px; margin-top:2px;">Country choices released</h3>
                     </div>
-                    <div class="card">
-                        <div class="step-num">Step 3</div>
-                        <h3 style="font-size:15px; margin-top:6px;">Submit by the deadline</h3>
+                    <div class="tl-item">
+                        <div class="tl-date">Date</div>
+                        <h3 style="font-size:15px; margin-top:2px;">Position paper deadline</h3>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-date">Conference Day</div>
+                        <h3 style="font-size:15px; margin-top:2px;">Turner Fenton MUN</h3>
                     </div>
                 </div>
-                <div class="download-row">
-                    <div>
-                        <h3>Position Paper Template</h3>
-                        <p style="margin-top:4px; color:var(--text-soft); font-size:13.5px;">Link to Google Doc or PDF</p>
-                    </div>
-                    <a class="btn btn-dark" href="#">Download</a>
+                <div style="text-align:center; margin-top:48px;">
+                    <a class="btn btn-dark" href="#">Register Your Delegation</a>
                 </div>
-                <table class="rubric">
-                    <tr>
-                        <th>Committee</th>
-                        <th>Contact</th>
-                    </tr>
-                    <tr>
-                        <td>Country stance</td>
-                        <td>About text. Clarity and accuracy of position.</td>
-                    </tr>
-                    <tr>
-                        <td>Policy ideas</td>
-                        <td>About text. How realistic and original the proposals are.</td>
-                    </tr>
-                    <tr>
-                        <td>Format</td>
-                        <td>About text. Following the template correctly.</td>
-                    </tr>
-                </table>
             </div>
         </div>
         <!-- OVERLAY CONTAINER END -->

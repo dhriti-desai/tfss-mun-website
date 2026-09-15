@@ -3,18 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Turner Fenton MUN | Position Papers</title>
+        <title>Turner Fenton MUN | Awards</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
         <style>
-            .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; } 
-            @media (max-width:800px){ .steps { grid-template-columns: 1fr 1fr; } } 
-            .step-num { font-weight: 700; color: var(--silver-dark); font-size: 13px; } 
-            .rubric { width: 100%; border-collapse: collapse; margin-top: 16px; font-size: 14px; } 
-            .rubric th, .rubric td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--line); } 
-            .rubric th { font-size: 12px; text-transform: uppercase; color: var(--text-soft); font-weight: 700; } 
-            .download-row { display: flex; align-items: center; justify-content: space-between; gap: 20px; background: var(--grey-bg); border: 1px solid var(--line); border-radius: 12px; padding: 24px; margin-top: 32px; flex-wrap: wrap; }
+            .medal { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; background: linear-gradient(155deg,var(--silver-light),var(--silver) 60%,var(--silver-dark)); display: flex; align-items: center; justify-content: center; font-size: 9px; font-weight: 700; color: var(--ink); text-align: center; } 
+            .award-card { display: flex; gap: 16px; align-items: flex-start; }
 
             /* Overlay Styles */
             .overlay-container {
@@ -67,7 +62,7 @@
         <nav class="nav">
             <div class="nav-inner">
                 <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
-                Turner Fenton MUN  </a>
+                    Turner Fenton MUN  </a>
                 <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
                 <div class="navlinks" id="navlinks">
                     <a href="secretariat.html">Secretariat</a>
@@ -86,58 +81,46 @@
         <div class="overlay-container">
             <!-- OVERLAY ELEMENT -->
             <div class="coming-soon-overlay">
-                <span style="font-family: 'ABeeZee', sans-serif;">coming soon...</span>
+                <span style="font-family: 'ABeeZee', sans-serif;">TFSSMUN III coming soon...</span>
             </div>
-            <div class="page-banner" style="background-image: url('banners/position-papers.png'); background-position: center center; background-size: cover; height: 300px;">
+            <div class="page-banner" style="background-image: url('banners/awards.png'); background-position: center center; background-size: cover; height: 300px;">
                 <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()">
-                <h1>Position Papers</h1>
-                <p>What is required, how it is graded, and where to send it.</p>
+                <h1>Awards</h1>
+                <p>Recognizing diplomacy, leadership, preparation, and exceptional debate.</p>
             </div>
             <div class="header-transition-bar" style="background-color: #486e8c;"></div>
-            <div class="section">
-                <div class="section-head">
-                    <h2 style="font-family: 'ABeeZee', sans-serif; font-size: 35px; color: #486e8c;">Submission Timeline</h2>
+            <section class="awards-section" style="color: #2d6480; background-color: #edf2f7;">
+                <div class="awards-header">
+                    <h1 style="font-size: 35px; font-family: 'ABeeZee', sans-serif;">TFSS MUN Award Winners</h1>
+                    <p style="color: #090909;" class="">Recognizing exceptional diplomacy, delegate excellence, and committee leadership.</p>
                 </div>
-                <div class="steps" style="margin-top: -20px;">
-                    <div class="card">
-                        <div class="step-num">Step 1</div>
-                        <h3 style="font-size:15px; margin-top:6px;">release date</h3>
+                <div class="awards-container" style="padding-top: 50px;">
+                    <!-- Award Card 1 -->
+                    <div class="award-card float-1" style="background-color: #f4f5f7;">
+                        <div class="award-title" style="color: #1f5c7a;">Best Delegate</div>
+                        <div class="award-winner-name" style="color: #5d89ac;">Alex Morgan</div>
+                        <p class="award-desc" style="color: #000000;">Awarded for outstanding negotiation and resolution drafting in the Security Council.</p>
                     </div>
-                    <div class="card">
-                        <div class="step-num">Step 2</div>
-                        <h3 style="font-size:15px; margin-top:6px;">can ask quesitons</h3>
+                    <!-- Award Card 2 -->
+                    <div class="award-card float-2" style="background-color: #f4f5f7;">
+                        <div class="award-title" style="color: #1f5c7a;">Outstanding Delegate</div>
+                        <div class="award-winner-name" style="color: #5d89ac;">Jordan Lee</div>
+                        <p class="award-desc" style="color: #000000;">Recognized for persuasive public speaking and diplomacy in DISEC.</p>
                     </div>
-                    <div class="card">
-                        <div class="step-num">Step 3</div>
-                        <h3 style="font-size:15px; margin-top:6px;">Submit by the deadline</h3>
+                    <!-- Award Card 3 -->
+                    <div class="award-card float-3" style="color: #000000; background-color: #f4f5f7;">
+                        <div class="award-title" style="color: #1f5c7a;">Best Position Paper</div>
+                        <div class="award-winner-name" style="color: #5d89ac;">Taylor Swift</div>
+                        <p class="award-desc" style="color: #000000;">Authored comprehensive research and policy solutions in SOCHUM.</p>
+                    </div>
+                    <!-- Award Card 4 -->
+                    <div class="award-card float-4" style="background-color: #f4f5f7;">
+                        <div class="award-title" style="color: #1f5c7a;">Honourable Mention</div>
+                        <div class="award-winner-name" style="color: #5d89ac;">Chris Evans</div>
+                        <p class="award-desc" style="color: #000000;">Demonstrated active collaboration and leadership in the Historical Crisis Committee.</p>
                     </div>
                 </div>
-                <div class="download-row">
-                    <div>
-                        <h3>Position Paper Template</h3>
-                        <p style="margin-top:4px; color:var(--text-soft); font-size:13.5px;">Link to Google Doc or PDF</p>
-                    </div>
-                    <a class="btn btn-dark" href="#">Download</a>
-                </div>
-                <table class="rubric">
-                    <tr>
-                        <th>Committee</th>
-                        <th>Contact</th>
-                    </tr>
-                    <tr>
-                        <td>Country stance</td>
-                        <td>About text. Clarity and accuracy of position.</td>
-                    </tr>
-                    <tr>
-                        <td>Policy ideas</td>
-                        <td>About text. How realistic and original the proposals are.</td>
-                    </tr>
-                    <tr>
-                        <td>Format</td>
-                        <td>About text. Following the template correctly.</td>
-                    </tr>
-                </table>
-            </div>
+            </section>             
         </div>
         <!-- OVERLAY CONTAINER END -->
         <footer class="site-footer">
