@@ -7,7 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } /* Ensures grid items stretch equally in height */#comGrid { display: grid; align-items: stretch; } /* Makes the clickable link stretch to full height */#comGrid > a { display: flex; flex-direction: column; height: 100%; } /* Makes the card inner container fill the wrapper completely */#comGrid .card { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; } /* Pushes bottom badges to the base so spacing stays clean */#comGrid .card .side-badges { margin-top: auto; }</style>
+        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } #comGrid { display: grid; align-items: stretch; } #comGrid > a { display: flex; flex-direction: column; height: 100%; } #comGrid .card { display: flex; flex-direction: column; height: 100%; box-sizing: border-box; } #comGrid .card .side-badges { margin-top: auto; }</style>
         <script>
 function phFallback(img,label){
   label = label || 'Picture';
@@ -27,13 +27,18 @@ function phFallback(img,label){
                 <div class="navlinks" id="navlinks">
                     <a href="secretariat.html">Secretariat</a>
                     <a href="committees.html">Committees</a>
-                    <a href="schedule.html">Schedule</a>
-                    <a href="venue.html">Venue</a>
-                    <a href="position-papers.html">Position Papers</a>
-                    <a href="awards.html">Awards</a>
+                    <details class="nav-dropdown">
+                        <summary>TFSSMUN III</summary>
+                        <div class="nav-dropdown-menu">
+                            <a href="schedule.html">Schedule</a>
+                            <a href="venue.html">Venue</a>
+                            <a href="position-papers.html">Position Papers</a>
+                            <a href="awards.html">Awards</a>
+                        </div>
+                    </details>
                     <a href="faq.html">FAQ</a>
                     <a href="contact.html">Contact</a>
-                    <a href="registration.html" class="nav-cta">Register Now</a>
+                    <a href="join-delegation.html" class="nav-cta">Join the Delegation</a>
                 </div>
             </div>
         </nav>
@@ -50,42 +55,33 @@ function phFallback(img,label){
                 <button class="filter-btn" data-cat="crisis" onclick="filterCom('crisis',this)">Crisis</button>
                 <button class="filter-btn" data-cat="special" onclick="filterCom('special',this)">Specialized Agency</button>
             </div>
-            <div class="grid grid-auto" id="comGrid" style="background-color: #edf2f7;">
-                <a href="who.html" style="text-decoration:none; color:inherit;" data-cat="ga"> <div class="card">
+            <div class="grid grid-auto" id="comGrid">
+                <a href="who.html" style="text-decoration:none; color:inherit;" data-cat="ga"> <div class="card committee-card-wha">
                         <span class="badge">General Assembly</span>
                         <h3 style="font-size:22px; margin-top:10px;">WHA</h3>
                         <p style="margin-top:2px;">World Health Assembly</p>
-                        <p style="margin-top:12px;">International public health and global health policy.</p>
+                        <p style="margin-top:12px;">Debate how artificial intelligence should be governed in healthcare.</p>
                     </div> </a>
-                <a href="iaea.html" style="text-decoration:none; color:inherit;" data-cat="special"> <div class="card">
+                <a href="iaea.html" style="text-decoration:none; color:inherit;" data-cat="special"> <div class="card committee-card-iaea">
                         <span class="badge">Specialized Agency</span>
                         <h3 style="font-size:22px; margin-top:10px;">IAEA</h3>
                         <p style="margin-top:2px;">International Atomic Energy Agency</p>
-                        <p style="margin-top:12px;">Nuclear security, energy, and non-proliferation.</p>
+                        <p style="margin-top:12px;">Balance peaceful nuclear energy with global security.</p>
                     </div> </a>
-                <a href="america.html" style="text-decoration:none; color:inherit;" data-cat="crisis"> <div class="card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('assets/vedhalogom.png'); background-size: cover;">
-                        <span class="badge">Historical Crisis</span>
-                        <h3 style="font-size: 22px; margin-top: 10px; color: #ffffff;">Cuban Missile Crisis JCC</h3>
-                        <p style="margin-top: 2px; color: #ffffff;">Joint Crisis Committee</p>
-                        <p style="margin-top: 12px; color: #ffffff;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
+                <a href="jcc.html" style="text-decoration:none; color:inherit;" data-cat="crisis"> <div class="card committee-card-jcc">
+                        <span class="badge">Crisis</span>
+                        <h3 style="font-size:22px; margin-top:10px;">Cuban Missile Crisis JCC</h3>
+                        <p style="margin-top:2px;">Joint Crisis Committee</p>
+                        <p style="margin-top:12px;">Choose the American or Soviet side of the Cuban Missile Crisis.</p>
                         <div class="side-badges">
-                            <span class="badge badge-silver">American Cabinet</span>
+                            <span class="badge badge-silver">Two cabinets</span>
                         </div>
                     </div> </a>
-                <a href="soviet.html" style="text-decoration:none; color:inherit;" data-cat="crisis"> <div class="card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url('assets/nologojessicacolor.png'); background-position: center center; background-size: cover; background-repeat: repeat;">
-                        <span class="badge">Historical Crisis</span>
-                        <h3 style="font-size: 22px; margin-top: 10px; color: #ffffff;">Cuban Missile Crisis JCC</h3>
-                        <p style="margin-top: 2px; color: #ffffff;">Joint Crisis Committee</p>
-                        <p style="margin-top: 12px; color: #ffffff;">A dual cabinet crisis simulation set during the Cuban Missile Crisis.</p>
-                        <div class="side-badges">
-                            <span class="badge badge-silver">Soviet Cabinet</span>
-                        </div>
-                    </div> </a>
-                <a href="tbd.html" style="text-decoration:none; color:inherit;" data-cat="ga special crisis"> <div class="card" style="background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url('assets/yash%2Bnitishalogonew.png'); background-position: center center; background-size: cover;">
-                        <span class="badge">idk Committee</span>
-                        <h3 style="font-size: 22px; margin-top: 10px; color: #ffffff;">Hollywood: Beyond The Spotlight</h3>
-                        <p style="margin-top: 2px; color: #ffffff;">Topic to be confirmed</p>
-                        <p style="margin-top: 12px; color: #ffffff;">More details will be announced by the Secretariat soon.</p>
+                <a href="tbd.html" style="text-decoration:none; color:inherit;" data-cat="crisis"> <div class="card committee-card-hollywood">
+                        <span class="badge">Crisis</span>
+                        <h3 style="font-size:22px; margin-top:10px;">Hollywood: Beyond The Spotlight</h3>
+                        <p style="margin-top:2px;">Nitisha Jain and Yash Tomar</p>
+                        <p style="margin-top:12px;">A crisis simulation about AI, security, labour, and intellectual property.</p>
                     </div> </a>
             </div>
         </div>
