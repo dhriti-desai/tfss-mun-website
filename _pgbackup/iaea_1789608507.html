@@ -1,0 +1,107 @@
+<!doctype html> 
+<html lang="en"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Turner Fenton MUN | America Crisis</title>         
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="styles.css"> 
+        <style>.side-badges { display: flex; gap: 8px; margin-top: 14px; flex-wrap: wrap; } /* Main Section Wrapper */.section { width: 100%; padding: 40px 24px; box-sizing: border-box; } .committee-container { max-width: 1350px; margin: 0 auto; } .committee-description h2 { margin-top: 0; margin-bottom: 24px; color: #1e293b; font-size: 32px; } /* Flexbox Container to Center Text Vertically Relative to Card */.committee-body { display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between; gap: 32px; } /* Text Wrapper */.committee-text { flex: 1; } .committee-text p { color: #1e293b; font-size: 17px; line-height: 1.75; margin-bottom: 20px; } .committee-text p:last-child { margin-bottom: 0; } /* Leadership Card Styling */.director-card-floated { width: 320px; max-width: 35%; min-width: 260px; flex-shrink: 0; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 18px; text-align: center; box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06); } .director-img-wrapper { width: 100%; height: 340px; overflow: hidden; border-radius: 8px; background-color: #e2e8f0; } .director-img-wrapper img { width: 100%; height: 100%; object-fit: cover; display: block; } .director-info { margin-top: 14px; } .director-info h3 { margin: 0; font-size: 19px; color: #1e293b; font-weight: 700; } .director-info p { margin: 4px 0 0; font-size: 14px; color: #64748b; } /* Background Guide Section Wrapper */.bg-guide-section { margin-top: 50px; padding-top: 40px; border-top: 1px solid #e2e8f0; } /* Clearfix wrapper so text wraps around floated elements */.bg-guide-body::after { content: ""; display: table; clear: both; } /* Floated Card on the Right */.bg-guide-card-right { float: right; width: 320px; max-width: 35%; min-width: 260px; margin-left: 32px;  /* Margin on the left side where text wraps */ margin-bottom: 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: center; box-shadow: 0 4px 12px rgba(0,0,0,0.03); box-sizing: border-box; display: flex; flex-direction: column; align-items: center; } .bg-guide-preview { width: 100%; height: 220px; background-color: #cbd5e1; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #475569; font-weight: 600; margin-bottom: 14px; } .bg-guide-card-right .nav-cta { display: inline-block; width: 100%; text-align: center; padding: 10px 0; text-decoration: none; box-sizing: border-box; } /* Background Guide Paragraph Styling Matching Director Bios */.bg-guide-text p { color: #1e293b; font-size: 17px; line-height: 1.75; margin-bottom: 20px; } .bg-guide-text p:last-child { margin-bottom: 0; } /* Mobile Responsiveness */@media (max-width: 768px) { .bg-guide-card-right {  float: none;  width: 100%;  max-width: 320px;  margin: 0 auto 24px auto; } }</style>         
+        <script>
+        function phFallback(img,label){
+          label = label || 'Picture';
+          var div = document.createElement('div');
+          div.className = img.className + ' ph';
+          div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+          img.replaceWith(div);
+        }
+        </script>         
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
+    </head>     
+    <body> 
+        <nav class="nav"> 
+            <div class="nav-inner"> 
+                <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)"> 
+                Turner Fenton MUN  </a> 
+                <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>                 
+                <div class="navlinks" id="navlinks"> 
+                    <a href="secretariat.html">Secretariat</a> 
+                    <a href="committees.html">Committees</a> 
+                    <a href="schedule.html">Schedule</a> 
+                    <a href="venue.html">Venue</a> 
+                    <a href="position-papers.html">Position Papers</a> 
+                    <a href="awards.html">Awards</a> 
+                    <a href="faq.html">FAQ</a> 
+                    <a href="contact.html">Contact</a> 
+                    <a href="registration.html" class="nav-cta">Register Now</a> 
+                </div>                 
+            </div>             
+        </nav>         
+        <div class="page-banner" style="background-position: center center; background-size: cover; height: 300px;"> 
+            <img class="banner-crest" src="assets/crest-large.png" alt="" onerror="this.remove()"> 
+            <h1>Cuban Missile Crisis JCC</h1> 
+            <p>American Cabinet</p> 
+        </div>         
+        <div class="header-transition-bar" style="background-position: center center; background-size: cover; background-color: #486e8c;"></div>         
+        <div class="section"> 
+            <div class="committee-container">
+                <!-- Main Description Section -->
+                <div class="committee-description">
+                    <h2 style="font-family: 'ABeeZee', sans-serif; font-size: 35px;">About the Committee &amp; Leadership</h2>
+                    <div class="committee-body" style="margin-top: -50px; padding-bottom: 50px;">
+                        <!-- Leadership Card (Placed on Right via Flexbox) -->
+                        <div class="director-card-floated">
+                            <div class="director-img-wrapper">
+                                <img src="assets/DSC_5573.jpg" alt="Jessica" onerror="phFallback(this, 'Jessica')">
+                            </div>
+                            <div class="director-info">
+                                <h3>Shaunak (last name)</h3>
+                                <p>Director</p>
+                            </div>
+                        </div>
+                        <!-- Vertically Centered Text Content -->
+                        <div class="committee-text">
+                            <p>stuff</p>
+                        </div>
+                    </div>
+                    <div class="committee-body" style="margin-top: -50px; padding-bottom: 50px; flex-direction: row;">
+                        <!-- Leadership Card (Placed on Left via HTML order and flex-direction: row) -->
+                        <div class="director-card-floated">
+                            <div class="director-img-wrapper">
+                                <img src="assets/(add).jpg" alt="Jessica" onerror="phFallback(this, 'Jessica')">
+                            </div>
+                            <div class="director-info">
+                                <h3>Naavya (last name)</h3>
+                                <p>Director</p>
+                            </div>
+                        </div>
+                        <!-- Text Content -->
+                        <div class="committee-text">
+                            <p>stuff</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Separate Background Guide Section Below -->
+                <div class="bg-guide-section" style="margin-top: -30px;">
+                    <div class="bg-guide-body">
+                        <!-- Background Guide Card Floated Right -->
+                        <div class="bg-guide-card-right">
+                            <div class="bg-guide-preview">
+                                <span>Background Guide Cover</span>
+                            </div>
+                            <a href="#" class="nav-cta">Download Guide</a>
+                        </div>
+                        <!-- Wrapped Text Content -->
+                        <div class="bg-guide-text">
+                            <h3 style="font-family: 'ABeeZee', sans-serif; font-size: 35px; margin-top: 0; margin-bottom: 24px; color: #1e293b;">IAEA: Nuclear Energy</h3>
+                            <p>stuff</p>
+                            <p>more stuff</p>
+                            <p>....</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
