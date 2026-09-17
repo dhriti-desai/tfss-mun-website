@@ -7,88 +7,34 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <style>
-            .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; } 
-            @media (max-width:800px){ .contact-grid { grid-template-columns: 1fr; } } 
-            .form-field { margin-bottom: 18px; } 
-            .form-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-soft); margin-bottom: 6px; } 
-            .form-field input, .form-field textarea { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 11px 13px; font-family: var(--font); font-size: 14px; } 
-            .form-field textarea { min-height: 110px; resize: vertical; } 
-            .dept-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
-
-            /* DROPDOWN MENU STYLES */
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown-toggle {
-                cursor: pointer;
-                display: inline-flex;
-                align-items: center;
-                gap: 4px;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: #0a1e35; /* Dark background matching navbar */
-                min-width: 180px;
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-                border-radius: 4px;
-                padding: 8px 0;
-                z-index: 1000;
-            }
-            .dropdown-menu a {
-                color: #ffffff;
-                padding: 10px 16px;
-                text-decoration: none;
-                display: block;
-                font-size: 14px;
-                transition: background 0.2s ease;
-            }
-            .dropdown-menu a:hover {
-                background-color: #102942;
-                color: #ffffff;
-            }
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-        </style>
+        <style>.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; } @media (max-width:800px){ .contact-grid {  grid-template-columns: 1fr; } } .form-field { margin-bottom: 18px; } .form-field label { display: block; font-size: 12.5px; font-weight: 700; color: var(--text-soft); margin-bottom: 6px; } .form-field input, .form-field textarea { width: 100%; border: 1px solid var(--line); border-radius: 8px; padding: 11px 13px; font-family: var(--font); font-size: 14px; } .form-field textarea { min-height: 110px; resize: vertical; } .dept-row { display: flex; justify-content: space-between; padding: 14px 0; border-bottom: 1px solid var(--line); font-size: 14px; }</style>
         <script>
-            function phFallback(img,label){
-              label = label || 'Picture';
-              var div = document.createElement('div');
-              div.className = img.className + ' ph';
-              div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
-              img.replaceWith(div);
-            }
-        </script>
+function phFallback(img,label){
+  label = label || 'Picture';
+  var div = document.createElement('div');
+  div.className = img.className + ' ph';
+  div.innerHTML = label + '<small>' + img.getAttribute('src') + '</small>';
+  img.replaceWith(div);
+}
+</script>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee&display=swap">
     </head>
     <body>
         <nav class="nav">
             <div class="nav-inner">
-                <a class="brand" href="index.html">  <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
-                    Turner Fenton MUN   </a>
+                <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+        Turner Fenton MUN  </a>
                 <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
                 <div class="navlinks" id="navlinks">
                     <a href="secretariat.html">Secretariat</a>
                     <a href="committees.html">Committees</a>
-                    <!-- TFSSMUN III DROPDOWN -->
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#">TFSSMUN III &#9662;</a>
-                        <div class="dropdown-menu">
-                            <a href="schedule.html">Schedule</a>
-                            <a href="venue.html">Venue</a>
-                            <a href="position-papers.html">Position Papers</a>
-                            <a href="awards.html">Awards</a>
-                            <a href="registration.html">Registration</a>
-                        </div>
-                    </div>
+                    <a href="schedule.html">Schedule</a>
+                    <a href="venue.html">Venue</a>
+                    <a href="position-papers.html">Position Papers</a>
+                    <a href="awards.html">Awards</a>
                     <a href="faq.html">FAQ</a>
                     <a href="contact.html">Contact</a>
-                    <a href="join_del.html" class="nav-cta">Join the Delegation</a>
+                    <a href="registration.html" class="nav-cta">Register Now</a>
                 </div>
             </div>
         </nav>
@@ -159,36 +105,36 @@
                 </div>
             </div>
         </div>
-        <footer class="site-footer">
-            <div class="footer-inner">
-                <div>
-                    <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
-                    <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
-                    <p>Turner Fenton Secondary School Model United Nations.</p>
-                </div>
-                <div>
-                    <h5>Conference</h5>
-                    <a href="secretariat.html">Secretariat</a>
-                    <a href="committees.html">Committees</a>
-                    <a href="schedule.html">Schedule</a>
-                    <a href="venue.html">Venue</a>
-                    <a href="awards.html">Awards</a>
-                </div>
-                <div>
-                    <h5>Delegates</h5>
-                    <a href="position-papers.html">Position Papers</a>
-                    <a href="registration.html">Registration</a>
-                    <a href="faq.html">FAQ</a>
-                </div>
-                <div>
-                    <h5>Connect</h5>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="#">Instagram</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>Copyright 2026 Turner Fenton Model United Nations</span>
-            </div>
-        </footer>
     </body>
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)" style="width:38px; height:38px;">
+                <h5 style="margin-top:12px;">Turner Fenton MUN</h5>
+                <p>Turner Fenton Secondary School Model United Nations.</p>
+            </div>
+            <div>
+                <h5>Conference</h5>
+                <a href="secretariat.html">Secretariat</a>
+                <a href="committees.html">Committees</a>
+                <a href="schedule.html">Schedule</a>
+                <a href="venue.html">Venue</a>
+                <a href="awards.html">Awards</a>
+            </div>
+            <div>
+                <h5>Delegates</h5>
+                <a href="position-papers.html">Position Papers</a>
+                <a href="registration.html">Registration</a>
+                <a href="faq.html">FAQ</a>
+            </div>
+            <div>
+                <h5>Connect</h5>
+                <a href="contact.html">Contact Us</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright 2026 Turner Fenton Model United Nations</span>
+        </div>
+    </footer>
 </html>

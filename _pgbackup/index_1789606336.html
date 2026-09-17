@@ -8,78 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
-        <style>
-            /* Reset default browser spacing */
-            body { margin: 0; padding: 0; } 
-            
-            /* DROPDOWN MENU STYLES */
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown-toggle {
-                cursor: pointer;
-                display: inline-flex;
-                align-items: center;
-                gap: 4px;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: #0a1e35; /* Matches navbar dark theme */
-                min-width: 180px;
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-                border-radius: 4px;
-                padding: 8px 0;
-                z-index: 1000;
-            }
-            .dropdown-menu a {
-                color: #ffffff;
-                padding: 10px 16px;
-                text-decoration: none;
-                display: block;
-                font-size: 14px;
-                transition: background 0.2s ease;
-            }
-            .dropdown-menu a:hover {
-                background-color: #102942;
-                color: #ffffff;
-            }
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
-
-            /* HERO & PAGE STYLES */
-            .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(10,30,53,1) 0%, rgba(16,41,66,1) 100%); color: var(--white); min-height: 300px; padding: 0 0 80px; } 
-            .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(215,226,236,0.08) 0%, rgba(215,226,236,0) 48%); } 
-            .hero-content { position: relative; z-index: 2; max-width: 1365px; margin: 0 auto; padding: 28px 54px 0; min-height: 300px; } 
-            .hero-ornament { position: absolute; right: 90px; top: 62px; width: 500px; height: 500px; border: 1px solid rgba(217,225,234,0.7); border-radius: 50%; transform: rotate(-14deg); opacity: 0.9; } 
-            .hero-ornament::before, .hero-ornament::after { content: ''; position: absolute; border: 1px solid rgba(217,225,234,0.4); border-radius: 50%; } 
-            .hero-ornament::before { inset: 48px 40px 70px 56px; } 
-            .hero-ornament::after { inset: 118px 88px 110px 102px; } 
-            .hero .hero-crest-bg, .hero img.crest { display: none; } 
-            .hero-text-block { max-width: 760px; padding-top: 100px; margin-left: 18px; position: relative; z-index: 2; } 
-            .hero-date { font-size: 12px; letter-spacing: 0.38em; color: var(--silver); font-weight: 600; text-transform: uppercase; margin-bottom: 22px; } 
-            .hero h1 { font-size: clamp(68px,7vw,132px); line-height: 0.92; font-weight: 500; letter-spacing: -0.06em; font-family: Georgia, 'Times New Roman', serif; color: #F1F5F9; } 
-            .hero p.sub { font-size: 20px; color: #E5ECF5; max-width: 640px; line-height: 1.5; margin-top: 26px; font-weight: 400; } 
-            .hero .actions { display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap; } 
-            .hero .btn { padding: 18px 28px; min-width: 220px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; } 
-            .hero .btn-primary { background: var(--white); color: var(--ink); border: 1px solid rgba(255,255,255,0.8); } 
-            .hero .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(217,225,234,0.9); } 
-            .date-badge { position: absolute; right: 100px; bottom: 40px; width: 170px; height: 170px; border: 1px solid rgba(217,225,234,0.9); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--silver-light); background: rgba(255,255,255,0.01); } 
-            .date-badge span, .date-badge small { font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--silver); font-weight: 500; } 
-            .date-badge strong { font-size: 32px; letter-spacing: 0.04em; font-weight: 500; margin: 10px 0 8px; font-family: Georgia, 'Times New Roman', serif; } 
-            .date-badge small { font-size: 20px; letter-spacing: 0.12em; } 
-            .letter-section { background: var(--grey-bg); background-image: url('assets/white-paper-background-texture_125869-833.avif'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; box-sizing: border-box; } 
-            .letter-grid { display: grid; grid-template-columns: 260px 1fr; gap: 52px; align-items: start; max-width: 1365px; margin: 0 auto; padding: 60px 20px; } 
-            .letter-grid .ph { aspect-ratio: 4/5; } 
-            .letter-grid p { color: var(--text-soft); font-size: 15px; line-height: 1.75; margin-bottom: 14px; } 
-            .sig-block { margin-top: 22px; } 
-            .sig-block .ph { width: 230px; height: 90px; border: none; background: transparent; padding: 0; display: block; object-fit: contain; filter: none; } 
-            .sig-name { margin-top: 10px; font-size: 19px; font-weight: 700; color: #486e8c; }
-        </style>
+        <style>/* Reset default browser spacing */body { margin: 0; padding: 0; } .hero { position: relative; overflow: hidden; background: linear-gradient(180deg, rgba(10,30,53,1) 0%, rgba(16,41,66,1) 100%); color: var(--white); min-height: 300px; padding: 0 0 80px; } .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at center, rgba(215,226,236,0.08) 0%, rgba(215,226,236,0) 48%); } .hero-content { position: relative; z-index: 2; max-width: 1365px; margin: 0 auto; padding: 28px 54px 0; min-height: 300px; } .hero-ornament { position: absolute; right: 90px; top: 62px; width: 500px; height: 500px; border: 1px solid rgba(217,225,234,0.7); border-radius: 50%; transform: rotate(-14deg); opacity: 0.9; } .hero-ornament::before, .hero-ornament::after { content: ''; position: absolute; border: 1px solid rgba(217,225,234,0.4); border-radius: 50%; } .hero-ornament::before { inset: 48px 40px 70px 56px; } .hero-ornament::after { inset: 118px 88px 110px 102px; } .hero .hero-crest-bg, .hero img.crest { display: none; } .hero-text-block { max-width: 760px; padding-top: 100px; margin-left: 18px; position: relative; z-index: 2; } .hero-date { font-size: 12px; letter-spacing: 0.38em; color: var(--silver); font-weight: 600; text-transform: uppercase; margin-bottom: 22px; } .hero h1 { font-size: clamp(68px,7vw,132px); line-height: 0.92; font-weight: 500; letter-spacing: -0.06em; font-family: Georgia, 'Times New Roman', serif; color: #F1F5F9; } .hero p.sub { font-size: 20px; color: #E5ECF5; max-width: 640px; line-height: 1.5; margin-top: 26px; font-weight: 400; } .hero .actions { display: flex; gap: 16px; margin-top: 36px; flex-wrap: wrap; } .hero .btn { padding: 18px 28px; min-width: 220px; text-transform: uppercase; letter-spacing: 0.12em; font-size: 12px; } .hero .btn-primary { background: var(--white); color: var(--ink); border: 1px solid rgba(255,255,255,0.8); } .hero .btn-outline { background: transparent; color: var(--white); border: 1px solid rgba(217,225,234,0.9); } .date-badge { position: absolute; right: 100px; bottom: 40px; width: 170px; height: 170px; border: 1px solid rgba(217,225,234,0.9); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--silver-light); background: rgba(255,255,255,0.01); } .date-badge span, .date-badge small { font-size: 22px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--silver); font-weight: 500; } .date-badge strong { font-size: 32px; letter-spacing: 0.04em; font-weight: 500; margin: 10px 0 8px; font-family: Georgia, 'Times New Roman', serif; } .date-badge small { font-size: 20px; letter-spacing: 0.12em; } .letter-section { background: var(--grey-bg); background-image: url('assets/white-paper-background-texture_125869-833.avif'); background-size: cover; background-position: center; background-repeat: no-repeat; width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw; box-sizing: border-box; } .letter-grid { display: grid; grid-template-columns: 260px 1fr; gap: 52px; align-items: start; max-width: 1365px; margin: 0 auto; padding: 60px 20px; } .letter-grid .ph { aspect-ratio: 4/5; } .letter-grid p { color: var(--text-soft); font-size: 15px; line-height: 1.75; margin-bottom: 14px; } .sig-block { margin-top: 22px; } .sig-block .ph { width: 230px; height: 90px; border: none; background: transparent; padding: 0; display: block; object-fit: contain; filter: none; } .sig-name { margin-top: 10px; font-size: 19px; font-weight: 700; color: #486e8c; }</style>
         <script>
             function phFallback(img,label){
                 label = label || 'Picture';
@@ -101,20 +30,13 @@
                     <div class="navlinks" id="navlinks">
                         <a href="secretariat.html">Secretariat</a>
                         <a href="committees.html">Committees</a>
-                        <!-- TFSSMUN III DROPDOWN -->
-                        <div class="dropdown">
-                            <a class="dropdown-toggle" href="#">TFSSMUN III &#9662;</a>
-                            <div class="dropdown-menu">
-                                <a href="schedule.html">Schedule</a>
-                                <a href="venue.html">Venue</a>
-                                <a href="position-papers.html">Position Papers</a>
-                                <a href="awards.html">Awards</a>
-                                <a href="registration.html">Registration</a>
-                            </div>
-                        </div>
+                        <a href="schedule.html">Schedule</a>
+                        <a href="venue.html">Venue</a>
+                        <a href="position-papers.html">Position Papers</a>
+                        <a href="awards.html">Awards</a>
                         <a href="faq.html">FAQ</a>
                         <a href="contact.html">Contact</a>
-                        <a href="join_del.html" class="nav-cta">Join the Delegation<br></a>
+                        <a href="registration.html" class="nav-cta">Register Now</a>
                     </div>
                 </div>
             </nav>
@@ -124,7 +46,7 @@
                         <div class="hero-text-block">
                             <h1><span class="typewriter"></span></h1>
                             <div class="actions hero-buttons">
-                                <a class="btn btn-primary" href="join_del.html">Join the Delegation</a>
+                                <a class="btn btn-primary" href="committees.html">Join the Delegation</a>
                                 <a class="btn btn-outline" href="registration.html">Register Now</a>
                                 <a class="btn btn-outline" href="committees.html">Explore Committees</a>
                             </div>
@@ -133,6 +55,16 @@
                 </div>
             </section>
             <div class="header-transition-bar" style="background-color: #486e8c;"></div>
+            <!--
+            COUNTDOWN SECTION 
+            <section class="countdown-section" style="background-color: #e2eefd;">
+                <h2 style="font-family: 'ABeeZee', sans-serif;">Time Until the Conference</h2>
+                <div id="flipdown" class="flipdown flipdown__theme-dark"></div>
+                <div style="margin-top: 25px;">
+                    <a class="btn-schedule" href="schedule.html">View Schedule</a>
+                </div>
+            </section>
+        -->
             <section class="about">
 </section>
             <section class="section letter-section">
@@ -281,6 +213,7 @@
 
     function updateCoverflow() {
         cards.forEach((card, index) => {
+            // Calculate relative offset from active card
             let offset = index - activeIndex;
 
             if (offset === 0) {
@@ -309,6 +242,7 @@
         updateCoverflow();
     }
 
+    // Direct click on adjacent cards to switch
     cards.forEach((card, index) => {
         card.addEventListener('click', () => {
             activeIndex = index;
@@ -319,6 +253,7 @@
     nextBtn.addEventListener('click', nextCard);
     prevBtn.addEventListener('click', prevCard);
 
+    // Touch Swipe Support
     let startX = 0;
     wrapper.addEventListener('touchstart', (e) => startX = e.touches[0].clientX, { passive: true });
     wrapper.addEventListener('touchend', (e) => {
@@ -327,6 +262,7 @@
         else if (diff < -40) prevCard();
     }, { passive: true });
 
+    // Initialize initial state
     updateCoverflow();
 </script>
     </body>

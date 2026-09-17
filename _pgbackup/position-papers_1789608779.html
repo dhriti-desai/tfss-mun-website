@@ -51,45 +51,6 @@
                     font-size: 1.8rem;
                 }
             }
-
-            /* DROPDOWN MENU STYLES */
-            .dropdown {
-                position: relative;
-                display: inline-block;
-            }
-            .dropdown-toggle {
-                cursor: pointer;
-                display: inline-flex;
-                align-items: center;
-                gap: 4px;
-            }
-            .dropdown-menu {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                background-color: #0a1e35; /* Dark background matching navbar */
-                min-width: 180px;
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
-                border-radius: 4px;
-                padding: 8px 0;
-                z-index: 1000;
-            }
-            .dropdown-menu a {
-                color: #ffffff;
-                padding: 10px 16px;
-                text-decoration: none;
-                display: block;
-                font-size: 14px;
-                transition: background 0.2s ease;
-            }
-            .dropdown-menu a:hover {
-                background-color: #102942;
-                color: #ffffff;
-            }
-            .dropdown:hover .dropdown-menu {
-                display: block;
-            }
         </style>
         <script>
         function phFallback(img,label){
@@ -105,26 +66,19 @@
     <body>
         <nav class="nav">
             <div class="nav-inner">
-                <a class="brand" href="index.html">  <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
-                    Turner Fenton MUN   </a>
+                <a class="brand" href="index.html"> <img src="assets/logo-white.png" alt="Turner Fenton MUN logo" onerror="phFallback(this)">
+                Turner Fenton MUN  </a>
                 <button class="nav-toggle" onclick="document.getElementById('navlinks').classList.toggle('open')" aria-label="Menu">☰</button>
                 <div class="navlinks" id="navlinks">
                     <a href="secretariat.html">Secretariat</a>
                     <a href="committees.html">Committees</a>
-                    <!-- TFSSMUN III DROPDOWN -->
-                    <div class="dropdown">
-                        <a class="dropdown-toggle" href="#">TFSSMUN III &#9662;</a>
-                        <div class="dropdown-menu">
-                            <a href="schedule.html">Schedule</a>
-                            <a href="venue.html">Venue</a>
-                            <a href="position-papers.html">Position Papers</a>
-                            <a href="awards.html">Awards</a>
-                            <a href="registration.html">Registration</a>
-                        </div>
-                    </div>
+                    <a href="schedule.html">Schedule</a>
+                    <a href="venue.html">Venue</a>
+                    <a href="position-papers.html">Position Papers</a>
+                    <a href="awards.html">Awards</a>
                     <a href="faq.html">FAQ</a>
                     <a href="contact.html">Contact</a>
-                    <a href="join_del.html" class="nav-cta">Join the Delegation</a>
+                    <a href="registration.html" class="nav-cta">Register Now</a>
                 </div>
             </div>
         </nav>
